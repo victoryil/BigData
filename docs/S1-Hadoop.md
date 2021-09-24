@@ -168,11 +168,15 @@ Hive usa metastore como servicio de metadatos como comenteamos anteriormente, pu
 
 ### Impala
 
+
+
 Tecnologia de DB escalable y paralela sobre Hadoop, permitiendo realizar consultas sobre datos en HDFS o HBASE.
 
 Ficheros: Lzo, sequenceTitle, Avro, RcFile y parquet. Auth rol basado en Sentry, driver ODBC y SQL de Hive.
 
 El servidor de impala es un motor de DB distribuido y de procesamiento paralelo masivo. Consiste en un conjunto de Demonios que corren sobre unos servidores dentro del clúster CDH.
+
+![Impala - Architecture](https://www.tutorialspoint.com/impala/images/impala_architecture.jpg)
 
 #### Demonio
 
@@ -182,7 +186,7 @@ Los demonios de Impala están en constante comunicación con StateStore para ver
 
 #### StateStore
 
-este verifica que los demonio están corriendo en todos los nodos y retransmiten continuamente sus estados a cada uno de ellos. Se representa en el proceso StateStore y solo se necesita un server por clúster. Si el demonio de Impala queda fuera por error de Hardware, red o cualquier cosa, StateStore informa a los otros demonios  para que en los futuras consultas se evite preguntar al nodo que este caído.
+Este verifica que los demonio están corriendo en todos los nodos y retransmiten continuamente sus estados a cada uno de ellos. Se representa en el proceso StateStore y solo se necesita un server por clúster. Si el demonio de Impala queda fuera por error de Hardware, red o cualquier cosa, StateStore informa a los otros demonios  para que en los futuras consultas se evite preguntar al nodo que este caído.
 
 Como el propósito de StateStore es ayudar cuando algo va mal, no es un punto critico para el funcionamiento de un clúster de impala. Si el StateStore no esta corriendo o no es alcanzable los demonios continúan corriendo y distribuyendo el trabajo con normalidad. El clúster es menos robusto si otros demonios fallan mientras el StateStore esta fuera, cuando se recupera se restablece las comunicaciones.
 
