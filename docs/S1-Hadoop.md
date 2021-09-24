@@ -154,10 +154,16 @@ Hay 4 componentes principales en Hive:
 
 ##### Hive Metastore
 
-es el componente que almacena el catalogo de sistemas que contiene los metadatos, que hemos comentado anteriormente. Hive usa DerbyDB una DB de java como MySQL que puede usarse para crear metastore.
+Es el componente que almacena el catalogo de sistemas que contiene los metadatos, que hemos comentado anteriormente. Hive usa DerbyDB una DB de java como MySQL que puede usarse para crear metastore.
 
 ##### Curiosidades y datos de Hive
 
+Hive ofreece varias interfaces para correr las consultas, como Hue o Beeline. 
 
+Hue tiene una Ui a diferencia de beeline que es una linea de comandos.
+
+Hive usa metastore como servicio de metadatos como comenteamos anteriormente, pues profundicemos mas. Una tabla en Hive es simplemente un directorio que contiene 0-N archivos. Su ruta predeterminada es: /user/hive/warehouse/tablename. Las tablas soportan muchos formatos de datos para guardar y recuperar informacion.
 
 ### Impala
+
+Tecnologia de DB escalable y paralela sobre Hadoop, permitiendo realizar consultas sobre datos en HDFS o HBASE.
