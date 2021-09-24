@@ -167,3 +167,13 @@ Hive usa metastore como servicio de metadatos como comenteamos anteriormente, pu
 ### Impala
 
 Tecnologia de DB escalable y paralela sobre Hadoop, permitiendo realizar consultas sobre datos en HDFS o HBASE.
+
+Ficheros: Lzo, sequenceTitle, Avro, RcFile y parquet. Auth rol basado en Sentry, driver ODBC y SQL de Hive.
+
+El servidor de impala es un motor de DB distribuido y de procesamiento paralelo masivo. Consiste en un conjunto de Demonios que corren sobre unos servidores dentro del clúster CDH.
+
+#### Demonio
+
+Uno de los componentes del core de impala es un demonio que corre en cada DataNode del clúster, físicamente representado por *impalad*. Lee y escribe los archivos de datos, acepta consultas y distribuye el trabajo sobre el clúster, transmite de vuelta los resultados de las consultas intermedias al nodo coordinador. Se puede enviar una consulta a cualquier demonio, es decir cualquier DataNode, y ese sera el nodo coordinador para esa consulta. Los otros nodos le envía los resultados parciales al coordinador y este lo construye. Cuando conectas la imapla shell, siempre conectas con el mismo DataNode por conveniencia. Si vas a explorar y repartiras la carga entre varios DataNodes cuando este en produccion.
+
+Los Impala Demons estan en constante comunicacion con StateStore para verificar que los nodos se encuentren en estado correcto y puedan aceotar nuevos trabajos. Tambien reciben mensajes desde el demonio Catalogd (Hive)
