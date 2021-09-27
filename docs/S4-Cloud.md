@@ -55,3 +55,4 @@ Plataformas empresariales públicas para desarrolladores rápidos como una tende
 - **Nubes privadas: ** buena si necesita alta protección de datos, accesible con VPN ya con algunos proveedores. Siendo el usuario propietario de los recursos.
 - **Nubes hibridadas: **combina ambos modelos anteriores, el usuario es propietario de algunas partes y comparte otras.
 - **Nube comunitaria: **se organiza con la finalidad de servir una función o propósito común, son administradas por las organizaciones a las que pertenece o terceras partes.
+
