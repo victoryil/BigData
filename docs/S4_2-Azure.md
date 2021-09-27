@@ -205,3 +205,8 @@ DevOps reúne a individuos, procesos y tecnología mediante la automatización d
 |      Azure DevOps       | Use herramientas de colaboración de desarrollo como canalizaciones de alto rendimiento, repositorios Git privados gratuitos, paneles Kanban configurables y completas pruebas de carga basadas en la nube y automatizadas. Anteriormente conocido como Visual Studio Team Services. |
 |   Azure DevTest Labs    | Cree rápidamente entornos de Windows y Linux a petición para probar o realizar demostraciones de las aplicaciones directamente desde canalizaciones de implementación. |
 
+## Introducción a las cuentas de Azure
+
+Para crear y usar los servicios de Azure, necesita una suscripción de Azure.
+
+![Ilustración en la que se muestran los diferentes niveles del ámbito de la cuenta.](https://docs.microsoft.com/es-es/learn/azure-fundamentals/intro-to-azure-fundamentals/media/scope-levels-12669ee1.png)
