@@ -67,8 +67,8 @@ Facilita la conexión entre los usuarios y los partners de Microsoft, proveedore
 
 Azure proporciona una amplia gama de opciones para hospedar aplicaciones y servicios.
 
-|       Nombre del servicio        | Función del servicio                                         |
-| :------------------------------: | ------------------------------------------------------------ |
+|       Nombre del servicio        |                     Función del servicio                     |
+| :------------------------------: | :----------------------------------------------------------: |
 |      Azure Virtual Machines      | Máquinas virtuales (VM) Windows o Linux hospedadas en Azure. |
 | Azure Virtual Machine Scale Sets | Escalado de máquinas virtuales Windows o Linux hospedadas en Azure. |
 |     Azure Kubernetes Service     | Administración de clústeres para máquinas virtuales que ejecutan servicios en contenedores. |
@@ -80,3 +80,19 @@ Azure proporciona una amplia gama de opciones para hospedar aplicaciones y servi
 ### Redes
 
 La vinculación de recursos de proceso y el suministro de acceso a las aplicaciones es la función clave de la red de Azure.
+
+|    **Nombre del servicio**     |                   **Función del servicio**                   |
+| :----------------------------: | :----------------------------------------------------------: |
+|     Azure Virtual Network      | Conecta máquinas virtuales a conexiones de red privada virtual (VPN) entrantes. |
+|      Azure Load Balancer       | Equilibra las conexiones entrantes y salientes a aplicaciones o puntos de conexión de servicio. |
+|   Azure Application Gateway    | Optimiza la entrega de granjas de servidores de aplicaciones y, al mismo tiempo, aumenta la seguridad de las aplicaciones. |
+|       Azure VPN Gateway        | Accede a redes de Azure Virtual Network mediante puertas de enlace de VPN de alto rendimiento. |
+|           Azure DNS            | Proporciona respuestas DNS ultrarrápidas y disponibilidad de dominio extremadamente alta. |
+| Azure Content Delivery Network | Entrega contenido de gran ancho de banda a los clientes globalmente. |
+|     Azure DDoS Protection      | Protege las aplicaciones hospedadas en Azure frente a ataques por denegación de servicio distribuido (DDoS). |
+|     Azure Traffic Manager      | Distribuye el tráfico de red entre las regiones de Azure en todo el mundo. |
+|       Azure ExpressRoute       | Se conecta a Azure mediante conexiones seguras de gran ancho de banda dedicadas. |
+|     Azure Network Watcher      | Supervisa y diagnostica problemas de red mediante el análisis basado en el escenario. |
+|         Azure Firewall         | Implementa un firewall de alta seguridad y alta disponibilidad con escalabilidad ilimitada. |
+|       Azure Virtual WAN        | Crea una red de área extensa (WAN) unificada que conecta sitios locales y remotos. |
+
