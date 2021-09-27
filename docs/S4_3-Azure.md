@@ -402,3 +402,102 @@ Las siguientes consideraciones se aplican a los distintos niveles de acceso:
 - Los niveles frecuente, esporádico y de archivo se pueden establecer en el nivel de blob durante la carga o después de esta.
 - Los datos del nivel de acceso esporádico pueden tolerar una disponibilidad ligeramente inferior, pero aun así requieren una gran durabilidad, una latencia de recuperación y unas características de rendimiento similares a las de los datos de acceso frecuente. En el caso de los datos de acceso esporádico, un contrato de nivel de servicio (SLA) con una disponibilidad ligeramente inferior y unos costos de acceso mayores, en comparación con los datos de acceso frecuente, es aceptable a cambio de unos costos de almacenamiento menores.
 - El almacenamiento de archivo almacena datos sin conexión y ofrece los menores costos de almacenamiento, pero los mayores costos de acceso y rehidratación de datos.
+
+## Exploración de Azure Cosmos DB
+
+Azure Cosmos DB es un servicio de base de datos de varios modelos distribuido globalmente. Puede escalar de forma elástica e independiente el rendimiento y el almacenamiento en cualquier número de regiones de Azure de todo el mundo. Puede aprovechar un acceso rápido y en milisegundos de un solo dígito a los datos mediante cualquiera de las diversas API populares. Azure Cosmos DB proporciona de forma exclusiva contratos de nivel de servicio completos para garantizar el rendimiento, la latencia, la disponibilidad y la coherencia.
+
+Azure Cosmos DB es compatible con los datos sin esquema, lo que le permite compilar aplicaciones "Always On" con una gran capacidad de respuesta para admitir datos en continuo cambio. Puede usar esta característica para almacenar datos actualizados y mantenidos por usuarios de todo el mundo.
+
+![Diagrama de las bases de datos de Azure Cosmos DB en un sitio web del portal de aprendizaje.](https://docs.microsoft.com/es-es/learn/azure-fundamentals/azure-database-fundamentals/media/azure-cosmos-db-1c115364.png)
+
+Azure Cosmos DB es flexible. En el nivel más bajo, Azure Cosmos DB almacena los datos en formato de secuencia de registro de átomos (ARS). 
+
+## Exploración de Azure SQL Database
+
+Azure SQL Database es una base de datos relacional basada en la última versión estable del motor de base de datos de Microsoft SQL Server.
+
+### Características 
+
+Azure SQL Database es un motor de base de datos de plataforma como servicio (PaaS). SQL Database es un servicio totalmente administrado que ofrece alta disponibilidad, copias de seguridad y otras operaciones de mantenimiento comunes. Microsoft controla todas las actualizaciones del código del sistema operativo y SQL. No hace falta administrar la infraestructura subyacente. Puede crear una capa de almacenamiento de datos de gran rendimiento y disponibilidad para las aplicaciones y las soluciones de Azure.
+
+### Migración
+
+Puede migrar las bases de datos existentes de SQL Server con un tiempo de inactividad mínimo mediante Azure Database Migration Service. Microsoft Data Migration Assistant puede generar informes de evaluación que proporcionan recomendaciones para ayudarlo a través de los cambios necesarios anteriores a la ejecución de una migración. Después de evaluar y resolver cualquier corrección necesaria, está listo para comenzar el proceso de migración. Azure Database Migration Service realiza todos los pasos necesarios. El usuario solo tiene que cambiar la cadena de conexión en las aplicaciones.
+
+## Exploración de Azure Database for MySQL
+
+Azure Database for MySQL es un servicio de bases de datos relacionales en la nube, y se basa en el motor de base de datos de MySQL Community Edition. Disponibilidad del 99,99 % de Azure, con la tecnología de una red global de centros de recursos administrados por Microsoft
+
+Azure Database for MySQL ofrece lo siguiente:
+
+- Alta disponibilidad integrada sin coste adicional.
+- Rendimiento predecible y precios de pago por uso inclusivos.
+- Escalado según sea necesario, en cuestión de segundos.
+- Capacidad de protección de información confidencial en reposo y en movimiento.
+- Copias de seguridad automáticas.
+- Seguridad y cumplimiento de nivel empresarial.
+
+## Exploración de Azure Database for PostgreSQL
+
+Azure Database for PostgreSQL es un servicio de base de datos relacional en la nube. El software de servidor se basa en la versión de la comunidad del motor de base de datos de PostgreSQL de código abierto. Su familiaridad con las herramientas y la experiencia con PostgreSQL son aplicables cuando se use Azure Database for PostgreSQL.
+
+Además, Azure Database for PostgreSQL ofrece las siguientes ventajas:
+
+- Alta disponibilidad integrada en comparación con los recursos locales. No hay ninguna configuración, replicación o costo adicionales que sean necesarios para asegurarse de que las aplicaciones están siempre disponibles.
+- Precios sencillos y flexibles. Tiene un rendimiento predecible en función de un plan de tarifa seleccionado que incluye copias de seguridad automáticas, aplicación de revisiones de software, supervisión y seguridad.
+- Escalado o reducción vertical según sea necesario, en cuestión de segundos. Puede escalar procesos o almacenamiento por separado según sea necesario para asegurarse de que adapta su servicio para que coincida con el uso.
+- Copias de seguridad automáticas ajustables y restauración a un momento dado durante un máximo de 35 días.
+- Seguridad y cumplimiento de nivel empresarial para proteger la información confidencial en reposo y en movimiento. Esta seguridad abarca el cifrado de datos en el disco y el cifrado SSL entre la comunicación entre cliente y servidor.
+
+Azure Database for PostgreSQL está disponible en dos opciones de implementación: **Servidor único** e **Hiperescala (Citus)**.
+
+### Servidor único
+
+La opción de implementación Un solo servidor ofrece:
+
+- Alta disponibilidad integrada sin coste adicional (contrato de nivel de servicio del 99,99 %).
+- Rendimiento predecible y precios de pago por uso inclusivos.
+- Escalado vertical según sea necesario, en cuestión de segundos.
+- Supervisión y alertas para evaluar el servidor.
+- Seguridad y cumplimiento de nivel empresarial.
+- Capacidad de protección de información confidencial en reposo y en movimiento.
+- Copias de seguridad automáticas y restauración a un momento dado durante un máximo de 35 días.
+
+### Hiperescala (Citus)
+
+La opción de Hiperescala (Citus) escala horizontalmente las consultas entre varias máquinas mediante el particionamiento. Su motor de consultas paraleliza las consultas SQL entrantes en estos servidores para agilizar las respuestas en conjuntos de datos grandes. Proporciona servicios a las aplicaciones que requieren mayor escala y mejor rendimiento, por lo general las cargas de trabajo que se aproximan a los 100 GB de datos (o que ya los superan).
+
+## Exploración de Azure SQL Managed Instance
+
+Azure SQL Managed Instance es un servicio de datos en la nube escalable que proporciona la mayor compatibilidad con el motor de base de datos de SQL Server con todas las ventajas de una plataforma como servicio totalmente administrada. En función de su escenario, Azure SQL Managed Instance podría ofrecer más opciones para sus necesidades de base de datos.
+
+### Características
+
+ Azure SQL Managed Instance es un motor de base de datos de plataforma como servicio (PaaS). Aprovisionamiento rápido y escalado de servicio de Azure, junto con la aplicación automatizada de revisiones y las actualizaciones de versiones. Además, podrá estar seguro de que los datos siempre estarán allí cuando los necesite a través de características de alta disponibilidad integradas y un acuerdo de nivel de servicio (SLA) del 99,99 % de tiempo de actividad. También podrá proteger los datos con copias de seguridad automatizadas y un período de retención de copias de seguridad configurable
+
+### Migración
+
+Azure SQL Managed Instance facilita la migración de los datos locales en SQL Server a la nube con Azure Database Migration Service (DMS) o copias de seguridad y restauración nativas
+
+![Flujo de proceso para la migración de datos a Azure SQL Managed Instance.](https://docs.microsoft.com/es-es/learn/azure-fundamentals/azure-database-fundamentals/media/migration-process-flow-small-a899c59c.png)
+
+## Exploración de análisis y macrodatos
+
+La forma y el formato de los datos son muy variados. Cuando hablamos sobre macrodatos, nos referimos a grandes volúmenes de datos. En este escenario de Tailwind Traders, los datos se recopilan de los sensores GPS, que incluyen información de ubicación, datos de los sistemas del tiempo y muchos otros orígenes que generan grandes cantidades de datos. Con tal cantidad de datos, es cada vez más difícil comprenderlos y tomar decisiones basándose en ellos. Estos volúmenes son tan grandes que las formas de procesamiento y análisis tradicionales ya no son adecuadas.
+
+**Azure Synapse Analytics**
+
+[Azure Synapse Analytics](https://docs.microsoft.com/es-es/azure/sql-data-warehouse/) (anteriormente Azure SQL Data Warehouse) es un servicio de análisis ilimitado que reúne el almacenamiento de datos empresariales y el análisis de macrodatos. Puede consultar los datos como prefiera mediante recursos sin servidor o aprovisionados a escala. Tiene una experiencia unificada para ingerir, preparar, administrar y servir datos para las necesidades inmediatas de inteligencia empresarial y aprendizaje automático.
+
+**Azure HDInsight**
+
+[Azure HDInsight](https://azure.microsoft.com/services/hdinsight/) es un servicio de análisis de código abierto totalmente administrado para empresas. Es un servicio en la nube que hace que sea más fácil, rápido y rentable procesar grandes cantidades de datos. Puede ejecutar marcos de código abierto populares y crear tipos de clúster, como [Apache Spark](https://docs.microsoft.com/es-es/azure/hdinsight/spark/apache-spark-overview), [Apache Hadoop](https://docs.microsoft.com/es-es/azure/hdinsight/hadoop/apache-hadoop-introduction), [Apache Kafka](https://docs.microsoft.com/es-es/azure/hdinsight/kafka/apache-kafka-introduction), [Apache HBase](https://docs.microsoft.com/es-es/azure/hdinsight/hbase/apache-hbase-overview), [Apache Storm](https://docs.microsoft.com/es-es/azure/hdinsight/storm/apache-storm-overview) y [Machine Learning Services](https://docs.microsoft.com/es-es/azure/hdinsight/r-server/r-server-overview). HDInsight también admite una amplia gama de escenarios, como la extracción, la transformación y la carga de datos (ETL), el almacenamiento de datos, el aprendizaje automático e IoT.
+
+**Azure Databricks**
+
+[Azure Databricks](https://azure.microsoft.com/services/databricks/) le ayuda a descubrir información de todos los datos y a crear soluciones de inteligencia artificial. Puede configurar el entorno de Apache Spark en minutos y, después, escalar automáticamente y colaborar en proyectos compartidos en un área de trabajo interactiva. Azure Databricks admite Python, Scala, R, Java y SQL, así como marcos y bibliotecas de ciencia de datos, como TensorFlow, PyTorch y Scikit-learn.
+
+**Análisis con Azure Data Lake**
+
+[Azure Data Lake Analytics](https://azure.microsoft.com/services/data-lake-analytics/) es un servicio de trabajos de análisis a petición que simplifica los macrodatos. En lugar de implementar, configurar y ajustar el hardware, escribirá consultas para transformar los datos y extraer ideas valiosas. El servicio de análisis puede administrar trabajos de cualquier escala al instante, simplemente estableciendo el ajuste adecuado. Solo paga por su trabajo cuando se está ejecutando, lo que hace que sea más rentable.
