@@ -43,3 +43,40 @@ Cada Fabric Controller esta conectado a otra pieza especial de software conocida
 
 Cuando un usuario hace una peticion para crear una maquina virtual, Orchestator empaqueta todo lo necesario, elige el mejor servidor rack, y manda esos paquetes y peticion al Fabric Controller. Una vez que el Fabric Controller crea la maquina, el usuario puede conectar con ella.
 
+## ¿Qué es Azure Portal? 
+
+Es una consola unificada basada en web que proporciona una alternativa a las herramientas de línea de comandos. Con Azure Portal, puede administrar la suscripción de Azure mediante una interfaz gráfica de usuario. Puede:
+
+- Compile, administre y supervise todo, desde aplicaciones web sencillas hasta complejas implementaciones en la nube.
+- Cree paneles personalizados para una vista organizada de recursos.
+- Configure opciones de accesibilidad para una experiencia óptima.
+
+![Captura de pantalla en la que se muestra Azure Portal.](https://docs.microsoft.com/es-es/learn/azure-fundamentals/intro-to-azure-fundamentals/media/azure-portal-dd184579.png)
+
+## ¿Qué es Azure Marketplace?
+
+Facilita la conexión entre los usuarios y los partners de Microsoft, proveedores de software independientes y nuevas empresas que ofrecen sus soluciones y servicios, optimizados para ejecutarse en Azure. Los clientes de Azure Marketplace pueden buscar, probar, comprar y aprovisionar aplicaciones y servicios de cientos de los principales proveedores de servicios. Todas las soluciones y los servicios están certificados para ejecutarse en Azure.
+
+![Captura de pantalla en la que se muestra Azure Marketplace.](https://docs.microsoft.com/es-es/learn/azure-fundamentals/intro-to-azure-fundamentals/media/marketplace-6ca0b9bb.png)
+
+## Servicios de Azure
+
+![Diagrama en el que se muestra la vista general de los servicios de Azure populares con secciones para seguridad y administración, servicios de plataforma, nube híbrida y servicios de infraestructura.](https://docs.microsoft.com/es-es/learn/azure-fundamentals/intro-to-azure-fundamentals/media/azure-services-6c41a736.png)
+
+### Proceso
+
+Azure proporciona una amplia gama de opciones para hospedar aplicaciones y servicios.
+
+|       Nombre del servicio        | Función del servicio                                         |
+| :------------------------------: | ------------------------------------------------------------ |
+|      Azure Virtual Machines      | Máquinas virtuales (VM) Windows o Linux hospedadas en Azure. |
+| Azure Virtual Machine Scale Sets | Escalado de máquinas virtuales Windows o Linux hospedadas en Azure. |
+|     Azure Kubernetes Service     | Administración de clústeres para máquinas virtuales que ejecutan servicios en contenedores. |
+|       Azure Service Fabric       | Plataforma de sistemas distribuidos que se ejecuta en Azure o en el entorno local. |
+|           Azure Batch            | Servicio administrado para aplicaciones informáticas de alto rendimiento y paralelas. |
+|    Azure Container Instances     | Aplicaciones en contenedores que se ejecutan en Azure sin necesidad de aprovisionar servidores ni máquinas virtuales. |
+|         Azure Functions          | Un servicio de procesos sin servidor y controlado por eventos |
+
+### Redes
+
+La vinculación de recursos de proceso y el suministro de acceso a las aplicaciones es la función clave de la red de Azure.
