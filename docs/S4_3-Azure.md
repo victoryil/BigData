@@ -257,3 +257,148 @@ Al incorporar compatibilidad con el protocolo de enrutamiento de BGP, también p
 ### Conmutación por error de ExpressRoute
 
 consiste en configurar una instancia de VPN Gateway como una ruta segura de conmutación por error para las conexiones ExpressRoute. Los circuitos ExpressRoute tienen resistencia integrada. Sin embargo, no son inmunes a los problemas físicos que afectan a los cables que entregan conectividad ni a las interrupciones que afectan a la ubicación completa de ExpressRoute. En escenarios de alta disponibilidad, en los que existe un riesgo asociado a una interrupción de un circuito ExpressRoute, también puede aprovisionar una instancia de VPN Gateway que usa Internet como un método alternativo de conectividad. De este modo, puede garantizar que siempre haya una conexión a las redes virtuales.
+
+## Aspectos básicos de Azure ExpressRoute
+
+ExpressRoute le permite ampliar las redes locales a la nube de Microsoft mediante una conexión privada con la ayuda de un proveedor de conectividad.
+
+La conectividad puede ser desde una red de conectividad universal (IP VPN), una red Ethernet de punto a punto o una conexión cruzada virtual a través de un proveedor de conectividad en una instalación de ubicación compartida. Las conexiones de ExpressRoute no pasan por la red pública de Internet. Esto permite a las conexiones de ExpressRoute ofrecer más confiabilidad, más velocidad, latencia coherentes y mayor seguridad que las conexiones normales a través de Internet. Para información sobre cómo conectar la red a Microsoft mediante ExpressRoute, consulte ExpressRoute connectivity models (Modelos de conectividad de ExpressRoute).
+
+![Visualización en la que se muestra una introducción de alto nivel sobre el servicio Azure ExpressRoute](https://docs.microsoft.com/es-es/learn/azure-fundamentals/azure-networking-fundamentals/media/azure-expressroute-overview-5520731d.png)
+
+Modelo de interconexión de sistemas abiertos (OSI):
+
+- **Nivel 2 (L2)**: se trata del nivel de vínculo de datos, que proporciona una comunicación de nodo a nodo entre dos nodos de la misma red.
+- **Nivel 3 (L3)**: se trata del nivel de red, que proporciona el direccionamiento y enrutamiento entre los nodos de una red de varios nodos.
+
+### Características y ventajas de ExpressRoute
+
+El uso de ExpressRoute como servicio de conexión entre Azure y las redes locales tiene varias ventajas.
+
+- Conectividad de nivel 3 entre su red local y Microsoft Cloud a través de un proveedor de conectividad. La conectividad puede ser desde una red de conectividad universal (IP VPN), una red Ethernet de punto a punto, o una conexión cruzada virtual a través de un intercambio de Ethernet.
+- Conectividad de servicios en la nube de Microsoft en todas las regiones dentro de la región geopolítica.
+- Conectividad global a los servicios de Microsoft en todas las regiones con el complemento ExpressRoute Premium.
+- Enrutamiento dinámico entre la red y Microsoft a través de BGP.
+- Redundancia integrada en todas las ubicaciones de configuración entre pares para una mayor confiabilidad.
+- El tiempo de actividad de conexión SLA.
+- Compatibilidad con QoS de Skype para la empresa.
+
+#### Conectividad de nivel 3
+
+ExpressRoute proporciona conectividad de nivel 3 (nivel de dirección) entre la red local y la nube de Microsoft a través de asociados de conectividad. Estas conexiones pueden ser de una red punto a punto o universal. También puede tratarse de conexiones cruzadas virtuales a través de un intercambio.
+
+#### Redundancia integrada
+
+Cada proveedor de conectividad usa dispositivos redundantes para garantizar que las conexiones establecidas con Microsoft tengan alta disponibilidad. Puede configurar varios circuitos para complementar esta característica. Todas las conexiones redundantes se configuran con conectividad de nivel 3 para cumplir los Acuerdos de Nivel de Servicio.
+
+#### Conectividad con los Servicios en la nube de Microsoft
+
+ExpressRoute permite el acceso directo a los siguientes servicios en todas las regiones:
+
+- Microsoft Office 365
+- Microsoft Dynamics 365
+- Servicios de proceso de Azure, como Azure Virtual Machines
+- Servicios en la nube de Azure, como Azure Cosmos DB y Azure Storage
+
+Office 365 se creó para tener acceso a él de forma segura y fiable a través de Internet. 
+
+#### Conectividad local con Global Reach de ExpressRoute
+
+Puede permitir que Global Reach de ExpressRoute intercambie datos entre los sitios locales si conecta los diferentes circuitos ExpressRoute. El tráfico de los centros de datos viajará a través de la red de Microsoft.
+
+#### Enrutamiento dinámico
+
+ExpressRoute usa el protocolo de enrutamiento Protocolo de puerta de enlace de borde (BGP). BGP se usa para intercambiar rutas entre las redes locales y los recursos que se ejecutan en Azure. Este protocolo permite el enrutamiento dinámico entre la red local y los servicios que se ejecutan en la nube de Microsoft.
+
+### Modelos de conectividad de ExpressRoute
+
+ExpressRoute admite tres modelos que puede usar para conectar la red local con la nube de Microsoft:
+
+- Ubicación de CloudExchange
+- Conexión Ethernet de punto a punto
+- Conexión universal
+
+![Visualización de modelos de conectividad de Azure](https://docs.microsoft.com/es-es/learn/azure-fundamentals/azure-networking-fundamentals/media/azure-connectivity-models-4deabab1.png)
+
+#### Coubicación en un intercambio en la nube
+
+Normalmente, los proveedores de coubicación pueden ofrecer conexiones de nivel 2 y nivel 3 entre la infraestructura, que puede encontrarse en las instalación de la coubicación, y la nube de Microsoft. Por ejemplo, si el centro de datos tiene la ubicación compartida en un intercambio en la nube, como un ISP, puede solicitar una conexión cruzada virtual a la nube de Microsoft.
+
+#### Conexión Ethernet de punto a punto
+
+Las conexiones de punto a punto proporcionan conectividad de nivel 2 y nivel 3 entre el sitio local y Azure. Puede conectar sus oficinas o centros de datos a Azure mediante vínculos de punto a punto. Por ejemplo, si tiene un centro de datos local, puede usar un vínculo de Ethernet de punto a punto para conectarse a Microsoft.
+
+#### Redes universales
+
+Con la conectividad universal, puede integrar la red de área extensa (WAN) con Azure si proporciona conexiones a las oficinas y los centros de datos. Azure se integra con la conexión WAN para proporcionarle una conexión, como la que tendría entre el centro de datos y las sucursales.
+
+Con las conexiones universales, todos los proveedores de WAN ofrecen conectividad de nivel 3. Por ejemplo, si ya usa la conmutación de etiquetas de multiprotocolo para conectarse a las sucursales o a otros sitios de la organización, una conexión ExpressRoute a Microsoft se comporta como cualquier otra ubicación en la WAN privada.
+
+#### Consideraciones sobre la seguridad
+
+Con ExpressRoute los datos no viajan a través de la red pública de Internet y, por tanto, no se exponen a los posibles riesgos asociados a las comunicaciones de Internet. ExpressRoute es una conexión privada de la infraestructura local a la infraestructura de Azure. Incluso si tiene una conexión ExpressRoute, las consultas de DNS, la comprobación de la lista de revocación de certificados y las solicitudes de Azure Content Delivery Network se siguen enviando a través de la red pública de Internet.
+
+## Aspectos básicos de la cuenta de Azure Storage
+
+Es un servicio que puede usar para almacenar archivos, mensajes, tablas y otros tipos de información. Los clientes como sitios web, aplicaciones móviles, aplicaciones de escritorio y muchos otros tipos de soluciones personalizadas pueden leer y escribir datos en Azure Storage. Azure Storage también se usa en máquinas virtuales de infraestructura como servicio y en servicios en la nube de plataforma como servicio.
+
+Una cuenta de almacenamiento proporciona un espacio de nombres único para los datos de Azure Storage, al que se puede acceder desde cualquier lugar del mundo a través de HTTP o HTTPS. Los datos de esta cuenta son seguros, de alta disponibilidad, duraderos y escalables de forma masiva.
+
+## Aspectos básicos de Disk Storage
+
+Disk Storage proporciona discos para Azure Virtual Machines. Las aplicaciones y otros servicios pueden acceder a estos discos y usarlos cuando sea necesario
+
+Los discos tienen diferentes tamaños y niveles de rendimiento, desde unidades de estado sólido (SSD) a unidades de disco duro (HDD)
+
+## Aspectos básicos de Azure Blob Storage
+
+Azure Blob Storage es una solución de almacenamiento de objetos para la nube. Puede almacenar grandes cantidades de datos, como datos de texto o binarios. Azure Blob Storage es no estructurado.
+
+Los blobs no están limitados a formatos de archivo comunes. 
+
+Blob Storage resulta ideal para lo siguiente:
+
+- Visualización de imágenes o documentos directamente en un explorador.
+- Almacenamiento de archivos para acceso distribuido.
+- Streaming de audio y vídeo.
+- Almacenamiento de datos para copia de seguridad y restauración, recuperación ante desastres y archivado.
+- Almacenamiento de datos para el análisis en local o en un servicio hospedado de Azure.
+- Almacenamiento de hasta 8 TB de datos para máquinas virtuales.
+
+Los blobs se almacenan en contenedores, lo que ayuda a organizar los blobs en función de sus necesidades empresariales.
+
+En el diagrama siguiente se muestra cómo puede usar las cuentas, los contenedores y los blobs de Azure.
+
+![Diagrama de la jerarquía de una cuenta de almacenamiento](https://docs.microsoft.com/es-es/learn/azure-fundamentals/azure-storage-fundamentals/media/account-container-blob-4da0ac47.png)
+
+## Aspectos básicos de Azure Files
+Azure Files ofrece recursos compartidos de archivos totalmente administrados en la nube a los que se puede acceder mediante los protocolos del Bloque de mensajes del servidor y Network File System (versión preliminar). Los recursos compartidos de Azure se pueden montar simultáneamente en implementaciones de Windows, Linux y macOS en la nube o locales. 
+
+Use Azure Files para las siguientes situaciones:
+
+- Muchas aplicaciones locales usan recursos compartidos de archivos. Azure Files facilita la migración de esas aplicaciones que comparten datos a Azure. Si monta el recurso compartido de archivos en la misma letra de unidad que usa la aplicación local, la parte de la aplicación que accede al recurso compartido de archivos debe funcionar con cambios mínimos, si los hay.
+- Almacene archivos de configuración en un recurso compartido de archivos y acceda a ellos desde varias máquinas virtuales. Las herramientas y utilidades que usen varios desarrolladores de un grupo pueden almacenarse en un recurso compartido de archivos, lo que garantiza que todos los usuarios puedan encontrarlas y que utilizan la misma versión.
+- Escriba datos en un recurso compartido de archivos y procese o analice los datos más adelante. Por ejemplo, puede que desee hacerlo con registros de diagnóstico, métricas y volcados de memoria.
+
+La siguiente ilustración muestra el uso de Azure Files para compartir datos entre dos ubicaciones geográficas. Azure Files garantiza que los datos se cifren en reposo, y el protocolo SMB garantiza que los datos se cifren en tránsito.
+
+![Diagrama en el que se muestran las funcionalidades de uso compartido de archivos de Azure Files entre un recurso compartido de archivos de Azure de Oeste de EE. UU. y otro de Europa, cada uno con sus propios usuarios de SMB.](https://docs.microsoft.com/es-es/learn/azure-fundamentals/azure-storage-fundamentals/media/azure-files-5f942c3e.png)
+
+Una cosa que distingue Azure Files de los archivos ubicados en un recurso compartido de archivos corporativo es que puede tener acceso a los archivos desde cualquier lugar del mundo mediante una dirección URL que apunte al archivo. También puede usar tokens de Firma de acceso compartido (SAS) para permitir el acceso a un recurso privado durante un período de tiempo determinado.
+
+## Descripción de los niveles de acceso de blobs
+
+Azure proporciona varios *niveles de acceso*, que puede usar para equilibrar los costos de almacenamiento con sus necesidades de acceso.
+
+Entre los niveles de acceso disponibles se incluyen:
+
+- **Nivel de acceso frecuente**: optimizado para almacenar datos a los que se accede con frecuencia (por ejemplo, imágenes para el sitio web).
+- **Nivel de acceso esporádico**: optimizado para datos a los que se accede con poca frecuencia y que se almacenan al menos durante 30 días (por ejemplo, las facturas de los clientes).
+- **Nivel de acceso de archivo**: conveniente para datos a los que raramente se accede y que se almacenan durante al menos 180 días con requisitos de latencia flexibles (por ejemplo, copias de seguridad a largo plazo).
+
+Las siguientes consideraciones se aplican a los distintos niveles de acceso:
+
+- Solo los niveles de acceso frecuente y esporádico se pueden establecer en el nivel de cuenta. El nivel de acceso de archivo no está disponible en el nivel de cuenta.
+- Los niveles frecuente, esporádico y de archivo se pueden establecer en el nivel de blob durante la carga o después de esta.
+- Los datos del nivel de acceso esporádico pueden tolerar una disponibilidad ligeramente inferior, pero aun así requieren una gran durabilidad, una latencia de recuperación y unas características de rendimiento similares a las de los datos de acceso frecuente. En el caso de los datos de acceso esporádico, un contrato de nivel de servicio (SLA) con una disponibilidad ligeramente inferior y unos costos de acceso mayores, en comparación con los datos de acceso frecuente, es aceptable a cambio de unos costos de almacenamiento menores.
+- El almacenamiento de archivo almacena datos sin conexión y ofrece los menores costos de almacenamiento, pero los mayores costos de acceso y rehidratación de datos.
