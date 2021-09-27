@@ -1,6 +1,4 @@
-# S4 - Cloud 
-
-## Cloud Computing
+# Cloud Computing
 
 Es un paradigma que permite ofrecer servicios de computación a través de una red, es decir, la disponibilidad a pedido de los recursos del sistema informático, sin gestión activa directa del usuario
 

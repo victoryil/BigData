@@ -1,4 +1,4 @@
-# S4 - Azure
+# Azure modulo 1
 
 ## Introducción
 
@@ -335,3 +335,14 @@ Puede compilar una estructura flexible de grupos de administración y suscripcio
 - Cada grupo de administración y suscripción solo puede admitir un elemento primario.
 - Cada grupo de administración puede tener muchos elementos secundarios.
 - Todas las suscripciones y grupos de administración están dentro de una única jerarquía en cada directorio.
+
+## Terminología y conceptos de Azure
+
+### ¿Qué es App Service?
+
+App Service es un servicio basado en HTTP que permite crear y hospedar muchos tipos de soluciones basadas en la Web sin necesidad de administrar la infraestructura.
+
+### ¿Qué es Azure Marketplace?
+
+Azure Marketplace es una tienda en línea que hospeda aplicaciones certificadas y optimizadas para ejecutarse en Azure.
+

@@ -1,4 +1,4 @@
-# S1 - Big Data
+# Big Data
 
 Termino que se usa cuando tenemos colecciones de datos bastantes grandes y complejas
 
