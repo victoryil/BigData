@@ -62,3 +62,34 @@ Durante la carga de datos trackea que dato se encuentra en que partición. Otra 
 - Warehouse aprovecha el almacenamiento SSD para actuar como una cache
 - Hereda la elasticidad, escalabilidad y la alta disponibilidad
 - Tiene una gran pool de instancias lo que la hace mas rápido de escalar
+
+## Etapas de un dato
+
+Tenemos dos tipos de etapas internas y por nombre, la de nombre la podemos crear y administrar nosotros mientras la interna se administra y crea internamente por Snowflake
+
+## Carga de datos
+
+### Bulk Loading
+
+- Usa la copia del comando desde **stage**
+- Confia en los recursos provisionados por el usuario
+- Soporta transformaciones simples
+
+### Continuos Loading
+
+- Usa **Snowipe**
+- No confia en los recursos de los usuarios pero internamente son provisionados por Snowflake
+- Soporta transformaciones simples y complejas
+
+## Snowpipe
+
+Es una pequeña tubería que se usa para la carga de datos continua y un caso de uso es para obtener datos en tiempo real que cargan cada 5 o 10 minutos  se desea cargar estos datos en snowflake sin escribir ningún framework.
+
+Funciona de la manera que tiene una entrada de datos y hay un bucket que se encuentra esperando. 
+
+- Actualmente Snowpipe esta solo disponible en AWS y en Azure
+- Crear una tuberia en snowflake
+  - Genera SQS AN en el caso de aws
+  - SQS hace el trato entre aws y snowflake
+- Los eventos de aws s3 se configura para desencadena notificaciones usando es snowflake generados por los endpoint de SQS
+- Los trigger de SQS (Simple Queue Service) de snowflake copia el comando de carga desde S3 ala tabla de snowflake
