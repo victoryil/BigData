@@ -42,3 +42,17 @@ Es la capa que guarda todos los datos, veamos sus características:
 
 ### Capa de servicio
 
+Esta capa es el cerebro de snowflake porque toma el control de todos los componentes claves que permite que snowflake funcione mas rápido eficiente y efectivo.
+
+se compone de los siguientes componentes: 
+
+- Autenticación y control de acceso
+- Administración de infraestructura
+- Optimizador
+- Administrador de metadatos
+- Seguridad
+
+Para conectarnos a el lo podremos hacer via ***consola*** o bien por cualquier driver **odbc / jdbc**. Siempre que estemos lanzando cualquier consulta para cualquier dato, esta detendrá esos datos, de forma que si otro usuario quiere hacer otra vez la misma query no tiene porque pasar por la capa de computación para procesar los datos.
+
+Durante la carga de datos trackea que dato se encuentra en que partición. Otra cosa importante es que mantiene la consistencia de la transición entre Warehouse
+
