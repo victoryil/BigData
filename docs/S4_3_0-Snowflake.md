@@ -13,9 +13,19 @@ Por ultimo a destacar tenemos que tiene muy pocos gastos generales de gestión m
 Contiene tres capas diferentes:
 
 - capa de servicio
+
 - capa de computación
+
 - capa de almacenamiento
-- ![Snowflake Cloud Data Warehouse 101: A Comprehensive Guide](https://lh5.googleusercontent.com/L5JnqaSeUBBDRabZwcOiwI08auyK19U8tCAfCuDWNmeg1FJlkHQvAIlC7uGZL0QYtZ_yP2krpXR-S9I-95y9ayFsxqXDgVhcNetWF5KbX00QnzY37smn_CO8xqhRUh5ATgBVRaKQ)
+
+
+![Snowflake Cloud Data Warehouse 101: A Comprehensive Guide](https://lh5.googleusercontent.com/L5JnqaSeUBBDRabZwcOiwI08auyK19U8tCAfCuDWNmeg1FJlkHQvAIlC7uGZL0QYtZ_yP2krpXR-S9I-95y9ayFsxqXDgVhcNetWF5KbX00QnzY37smn_CO8xqhRUh5ATgBVRaKQ)
+
+la cache mantiene en la capa de servicio y computación el tiempo de respuesta optimo, por otro lado la capa de computación es escalable y económica, por ultimo el almacenamiento se representa como:
+
+- bases de datos, esquemas y tablas en la organizacion logica
+- Como archivos en la física
+- Tiene una propiedad columnar y archivo comprimido
 
 ### Capa de almacenamiento
 
