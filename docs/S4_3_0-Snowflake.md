@@ -4,7 +4,7 @@
 
 En primer lugar es que es la única plataforma de datos **completamente** en la nube, también es totalmente escalable por el motivo que esta diseñada solo para la nube por lo que a su vez hereda todo el poder de la nube **(escalabilidad, elasticidad y almacenamiento ilimitado)**.
 
-Snowflake tiene una arquitectura única y por capas desacopladas entre si, así como muchas características únicas como el tiempo viajado, 0% de clonado de datos, datos compartidos entre tantas.
+Snowflake tiene una arquitectura única y por capas desacopladas entre si, así como muchas características únicas como el tiempo viajado, zero copy clone, datos compartidos entre tantas.
 
 Por ultimo a destacar tenemos que tiene muy pocos gastos generales de gestión mientras trabajamos con este
 
@@ -103,3 +103,32 @@ Funciona de la manera que tiene una entrada de datos y hay un bucket que se encu
   - SQS hace el trato entre aws y snowflake
 - Los eventos de aws s3 se configura para desencadena notificaciones usando es snowflake generados por los endpoint de SQS
 - Los trigger de SQS (Simple Queue Service) de snowflake copia el comando de carga desde S3 ala tabla de snowflake
+
+## Zero copy clone
+
+- No hay copia física de datos solo los metadatos de la operación (Zero Data Cloning)
+- Operación de clonado de datos instantánea
+- Los datos no modificados se guardan solo una vez
+- Los datos modificados se guardan en nuevos archivos de micro-particiones
+- El clonado solo se puede realizar sobre tablas, esquemas y bases de datos
+
+## Time Travel
+
+- Mantiene las versiones anteriores de los datos
+- Restaura los datos anteriores basados en tiempo
+- La retención de datos, con la versión standard son 1 día y 90 con la versión de empresa u otra mayor.
+- **UNDROP** es el comando para recuperar los datos borrados
+- El periodo de retencion es especificado por el administrador
+- Se puede combinar con la característica clone para restaurar datos anteriores en tablas/schemas/DB
+
+> Para comprender el concepto podríamos decir que es un pequeño símil a GitHub dentro de Snowflake
+
+## Fail-Safe
+
+- Característica de recuperacion de datos por Snowflake
+- Periodo de **Fail-safe** empieza después de la retencion del periodo de time-travel
+- Los datos se pueden recuperar mas de 7 días.
+- Se puede hacer gracias al equipo de soporte de Snowflake
+- El almacenamiento Fail-Safe tiene costes a parte.
+
+> En conclusión, diría que es una especie de reserva de datos en los discos duros, parecido al Time-Travel pero que perduran mas con un coste adicional
