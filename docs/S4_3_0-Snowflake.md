@@ -56,3 +56,9 @@ Para conectarnos a el lo podremos hacer via ***consola*** o bien por cualquier d
 
 Durante la carga de datos trackea que dato se encuentra en que partición. Otra cosa importante es que mantiene la consistencia de la transición entre Warehouse
 
+## ¿Porque solo disponible en la nube?
+
+- Ofrece una capacidad ilimitada y 3 copias por defecto de los datos
+- Warehouse aprovecha el almacenamiento SSD para actuar como una cache
+- Hereda la elasticidad, escalabilidad y la alta disponibilidad
+- Tiene una gran pool de instancias lo que la hace mas rápido de escalar
