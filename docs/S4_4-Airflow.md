@@ -29,5 +29,15 @@ Es responsable de ejecutar realmente una tarea, determina cómo se deben adminis
 
 ### Metadata database
 
-Es una base de datos relacional donde el Scheduler y el Worker actualiza el estado sobre la ejecucion de tareas
+Es una base de datos relacional donde el Scheduler y el Worker actualiza el estado sobre la ejecución de tareas
 
+## Dags
+
+Son colecciones de tareas o de trabajos a ejecutar conectados mediante relaciones y dependencias. Son la representación de los workflows.
+
+Los grafos deben cumplir dos condiciones: ser dirigidos y acíclicos:
+
+- **Dirigidos**: Las relaciones entre los nodos tienen solo un sentido.
+- **Acíclicos**: No pueden formar ciclos, es decir, la ejecución no puede volver a un nodo que ya ha ejecutado.
+
+Cada una de las tareas del DAG representada como un nodo, se describe con un **operador** y generalmente es atómica. Existen operadores predefinidos, y es posible extender y crear nuevos operadores si fueran necesarios.
