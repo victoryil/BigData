@@ -1,4 +1,3 @@
 site_name: Victor - Big Data
 theme:
-  palette:
-    scheme: default
+  name: material
