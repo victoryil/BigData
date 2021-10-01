@@ -1,4 +1,4 @@
 site_name: Victor - Big Data
 theme:
   palette:
-    scheme: slate
+    scheme: default
