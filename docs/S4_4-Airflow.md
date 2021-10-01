@@ -6,8 +6,6 @@ Python actua como el archivo de configuracion para el workflow, schedules y ejec
 
 ## Componentes de Airflow
 
-![image-20211001095940396](C:\Users\vd.gil\AppData\Roaming\Typora\typora-user-images\image-20211001095940396.png)
-
 Airflow tiene 4 componentes principales: 
 
 - UI / Web Server
@@ -41,3 +39,43 @@ Los grafos deben cumplir dos condiciones: ser dirigidos y acíclicos:
 - **Acíclicos**: No pueden formar ciclos, es decir, la ejecución no puede volver a un nodo que ya ha ejecutado.
 
 Cada una de las tareas del DAG representada como un nodo, se describe con un **operador** y generalmente es atómica. Existen operadores predefinidos, y es posible extender y crear nuevos operadores si fueran necesarios.
+
+### Default arguments
+
+Es un diccionario que se analizará para todas las tareas, podemos pasar este diccionario al objeto DAGs, que lo pasará a todas las tareas.
+
+Necesitaremos definir al menos dos argumentos para tu default arguments. El primero será el owner  y segundo la fecha de inicio.
+
+## Tareas y operadores
+
+### Tareas 
+
+Representa un nodo en el gráfico. Es una unidad de trabajo que realizan los trabajadores. Una tarea siempre la define un operador.
+
+### Operadores
+
+Es la lógica real detrás de una tarea. Define qué tipo de acciones se realizan como parte de una tarea.
+
+#### Tipos de operadores
+
+- Operador de acción: realizan acciones o le dicen a un sistema que realice una acción.
+- Operador de transferencia: este mueve los datos
+- Sensores: siguen funcionando hasta que se cumple un criterio
+
+###  Definición de dependencias
+
+cuando un operador depende de otro podemos indicarlo con *>>* o bien usando los metodos set_upstream y set_downstream
+
+Ejemplo: El op2 dependerá de el op1. op1 >> op2 
+
+### Arquitectura
+
+### Hooks
+
+Se usa para conectarse con plataformas externas, los operadores usan hook por debajo. Mejora el rendimiento de las acciones cuando no están disponible via built-in operators. Se pueden usar en PythonOpterator
+
+## XComs / Cross Cut Communication
+
+Habilita el intercambio de mensajes, hace el push de clave valor desde una tarea a la base de datos de metadatos, comparte el estado.
+
+Un X mensaje tiene clave, valor, task id, dag id, timestamp
