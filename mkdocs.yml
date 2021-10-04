@@ -1,6 +1,34 @@
 site_name: Victor - Big Data
 theme:
   name: material
+  language: es
+  palette:
+      # Light mode
+      - media: "(prefers-color-scheme: light)"
+        scheme: default
+        primary: deep purple
+        accent: indigo
+        toggle:
+          icon: material/toggle-switch-off-outline
+          name: Switch to dark mode
+      # Dark mode
+      - media: "(prefers-color-scheme: dark)"
+        scheme: slate
+        primary: deep purple
+        accent: indigo
+        toggle:
+          icon: material/toggle-switch
+          name: Switch to light mode  
 markdown_extensions:
-  - pymdownx.highlight:
+  - admonition
+  - codehilite:
+      guess_lang: false
       linenums: true
+  - toc:
+      permalink: true
+  - footnotes
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed 
+  - pymdownx.keys
+  - pymdownx.details
+  - pymdownx.superfences
