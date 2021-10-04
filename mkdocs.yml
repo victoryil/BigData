@@ -1,3 +1,6 @@
 site_name: Victor - Big Data
 theme:
   name: material
+markdown_extensions:
+  - pymdownx.highlight:
+      linenums: true
