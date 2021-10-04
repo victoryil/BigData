@@ -79,3 +79,4 @@ Se usa para conectarse con plataformas externas, los operadores usan hook por de
 Habilita el intercambio de mensajes, hace el push de clave valor desde una tarea a la base de datos de metadatos, comparte el estado.
 
 Un X mensaje tiene clave, valor, task id, dag id, timestamp
+
