@@ -1,2 +1,0 @@
-# Spark Core y SQL
-
