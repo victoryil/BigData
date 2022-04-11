@@ -40,3 +40,4 @@ Entre ellas podemos ver:
 - union, intersection, subtract, cartesian
 
 La diferencia entre map y flatmap es que la salida del map sigue siendo 1 RDD sin embargo el flatmap es un conjunto de RDD`s
+
