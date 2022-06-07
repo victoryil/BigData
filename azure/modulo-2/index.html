@@ -1,0 +1,2460 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.2">
+    
+    
+      
+        <title>Modulo 2 - Victor - Big Data</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.5d38496d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#azure-modulo-2" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Victor - Big Data" class="md-header__button md-logo" aria-label="Victor - Big Data" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Victor - Big Data
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Modulo 2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Victor - Big Data" class="md-nav__button md-logo" aria-label="Victor - Big Data" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Victor - Big Data
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro/" class="md-nav__link">
+        Introduccion a Big Data
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Apache
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Apache" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Apache
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apache/hadoop/intro/" class="md-nav__link">
+        Hadoop
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apache/hbase/intro/" class="md-nav__link">
+        HBase
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apache/hive/intro/" class="md-nav__link">
+        Hive
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apache/kafka/intro/" class="md-nav__link">
+        Kafka
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_5">
+          Spark
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Spark" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Spark
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apache/spark/intro/" class="md-nav__link">
+        Introduccion
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apache/spark/SparkSQL/" class="md-nav__link">
+        Spark SQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apache/spark/SparkStreaming/" class="md-nav__link">
+        Spark Streaming
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apache/spark/TuningSpark/" class="md-nav__link">
+        Tuning Spark
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Azure
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Azure" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Azure
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
+        Introduccion Cloud
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulo-1/" class="md-nav__link">
+        Modulo 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Modulo 2
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Modulo 2
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion-a-los-servicios-de-azure-compute" class="md-nav__link">
+    Introducción a los servicios de Azure Compute
+  </a>
+  
+    <nav class="md-nav" aria-label="Introducción a los servicios de Azure Compute">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maquinas-virtuales" class="md-nav__link">
+    Maquinas Virtuales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#azure-container-instances" class="md-nav__link">
+    Azure Container Instances
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#containers-y-kubernetes" class="md-nav__link">
+    Containers y Kubernetes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apps-services" class="md-nav__link">
+    Apps Services
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funciones" class="md-nav__link">
+    Funciones
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escalado-de-maquinas-virtuales-en-azure" class="md-nav__link">
+    Escalado de máquinas virtuales en Azure
+  </a>
+  
+    <nav class="md-nav" aria-label="Escalado de máquinas virtuales en Azure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-son-los-conjuntos-de-escalado-de-maquinas-virtuales" class="md-nav__link">
+    ¿Qué son los conjuntos de escalado de máquinas virtuales?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-es-azure-batch" class="md-nav__link">
+    ¿Qué es Azure Batch?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azure-app-service" class="md-nav__link">
+    Azure App Service
+  </a>
+  
+    <nav class="md-nav" aria-label="Azure App Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-servicios-de-aplicaciones" class="md-nav__link">
+    Tipos de servicios de aplicaciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicaciones-web" class="md-nav__link">
+    Aplicaciones web
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicaciones-de-api" class="md-nav__link">
+    Aplicaciones de API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trabajos-web" class="md-nav__link">
+    Trabajos web
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicaciones-moviles" class="md-nav__link">
+    Aplicaciones móviles
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azure-container-instances-o-azure-kubernetes-service" class="md-nav__link">
+    Azure Container Instances o Azure Kubernetes Service
+  </a>
+  
+    <nav class="md-nav" aria-label="Azure Container Instances o Azure Kubernetes Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-son-los-contenedores" class="md-nav__link">
+    ¿Qué son los contenedores?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-es-kubernetes" class="md-nav__link">
+    ¿Qué es Kubernetes?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-es-un-microservicio" class="md-nav__link">
+    ¿Qué es un microservicio?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azure-functions" class="md-nav__link">
+    Azure Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azure-virtual-desktop" class="md-nav__link">
+    Azure Virtual Desktop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aspectos-basicos-de-azure-virtual-network" class="md-nav__link">
+    Aspectos básicos de Azure Virtual Network
+  </a>
+  
+    <nav class="md-nav" aria-label="Aspectos básicos de Azure Virtual Network">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-son-las-redes-virtuales-de-azure" class="md-nav__link">
+    ¿Qué son las redes virtuales de Azure?
+  </a>
+  
+    <nav class="md-nav" aria-label="¿Qué son las redes virtuales de Azure?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aislamiento-y-segmentacion" class="md-nav__link">
+    Aislamiento y segmentación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comunicacion-con-internet" class="md-nav__link">
+    Comunicación con Internet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comunicacion-entre-los-recursos-de-azure" class="md-nav__link">
+    Comunicación entre los recursos de Azure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enrutamiento-del-trafico-de-red" class="md-nav__link">
+    Enrutamiento del tráfico de red
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtrado-del-trafico-de-red" class="md-nav__link">
+    Filtrado del tráfico de red
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conexion-de-redes-virtuales" class="md-nav__link">
+    Conexión de redes virtuales
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aspectos-basicos-de-azure-vpn-gateway" class="md-nav__link">
+    Aspectos básicos de Azure VPN Gateway
+  </a>
+  
+    <nav class="md-nav" aria-label="Aspectos básicos de Azure VPN Gateway">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#puertas-de-enlace-de-vpn" class="md-nav__link">
+    Puertas de enlace de VPN
+  </a>
+  
+    <nav class="md-nav" aria-label="Puertas de enlace de VPN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#redes-privadas-virtuales-basadas-en-directivas" class="md-nav__link">
+    Redes privadas virtuales basadas en directivas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redes-privadas-virtuales-basadas-en-rutas" class="md-nav__link">
+    Redes privadas virtuales basadas en rutas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recursos-de-azure-necesarios-para-una-vpn-gateway" class="md-nav__link">
+    Recursos de Azure necesarios para una VPN Gateway
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escenarios-de-alta-disponibilidad" class="md-nav__link">
+    Escenarios de alta disponibilidad
+  </a>
+  
+    <nav class="md-nav" aria-label="Escenarios de alta disponibilidad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-de-activo-en-espera" class="md-nav__link">
+    Configuración de activo-en espera
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activoactivo" class="md-nav__link">
+    Activo/activo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conmutacion-por-error-de-expressroute" class="md-nav__link">
+    Conmutación por error de ExpressRoute
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aspectos-basicos-de-azure-expressroute" class="md-nav__link">
+    Aspectos básicos de Azure ExpressRoute
+  </a>
+  
+    <nav class="md-nav" aria-label="Aspectos básicos de Azure ExpressRoute">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas-y-ventajas-de-expressroute" class="md-nav__link">
+    Características y ventajas de ExpressRoute
+  </a>
+  
+    <nav class="md-nav" aria-label="Características y ventajas de ExpressRoute">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conectividad-de-nivel-3" class="md-nav__link">
+    Conectividad de nivel 3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redundancia-integrada" class="md-nav__link">
+    Redundancia integrada
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conectividad-con-los-servicios-en-la-nube-de-microsoft" class="md-nav__link">
+    Conectividad con los Servicios en la nube de Microsoft
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conectividad-local-con-global-reach-de-expressroute" class="md-nav__link">
+    Conectividad local con Global Reach de ExpressRoute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enrutamiento-dinamico" class="md-nav__link">
+    Enrutamiento dinámico
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelos-de-conectividad-de-expressroute" class="md-nav__link">
+    Modelos de conectividad de ExpressRoute
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelos de conectividad de ExpressRoute">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#coubicacion-en-un-intercambio-en-la-nube" class="md-nav__link">
+    Coubicación en un intercambio en la nube
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conexion-ethernet-de-punto-a-punto" class="md-nav__link">
+    Conexión Ethernet de punto a punto
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redes-universales" class="md-nav__link">
+    Redes universales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consideraciones-sobre-la-seguridad" class="md-nav__link">
+    Consideraciones sobre la seguridad
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aspectos-basicos-de-la-cuenta-de-azure-storage" class="md-nav__link">
+    Aspectos básicos de la cuenta de Azure Storage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aspectos-basicos-de-disk-storage" class="md-nav__link">
+    Aspectos básicos de Disk Storage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aspectos-basicos-de-azure-blob-storage" class="md-nav__link">
+    Aspectos básicos de Azure Blob Storage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aspectos-basicos-de-azure-files" class="md-nav__link">
+    Aspectos básicos de Azure Files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descripcion-de-los-niveles-de-acceso-de-blobs" class="md-nav__link">
+    Descripción de los niveles de acceso de blobs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploracion-de-azure-cosmos-db" class="md-nav__link">
+    Exploración de Azure Cosmos DB
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploracion-de-azure-sql-database" class="md-nav__link">
+    Exploración de Azure SQL Database
+  </a>
+  
+    <nav class="md-nav" aria-label="Exploración de Azure SQL Database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas" class="md-nav__link">
+    Características
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migracion" class="md-nav__link">
+    Migración
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploracion-de-azure-database-for-mysql" class="md-nav__link">
+    Exploración de Azure Database for MySQL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploracion-de-azure-database-for-postgresql" class="md-nav__link">
+    Exploración de Azure Database for PostgreSQL
+  </a>
+  
+    <nav class="md-nav" aria-label="Exploración de Azure Database for PostgreSQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#servidor-unico" class="md-nav__link">
+    Servidor único
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hiperescala-citus" class="md-nav__link">
+    Hiperescala (Citus)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploracion-de-azure-sql-managed-instance" class="md-nav__link">
+    Exploración de Azure SQL Managed Instance
+  </a>
+  
+    <nav class="md-nav" aria-label="Exploración de Azure SQL Managed Instance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas_1" class="md-nav__link">
+    Características
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migracion_1" class="md-nav__link">
+    Migración
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploracion-de-analisis-y-macrodatos" class="md-nav__link">
+    Exploración de análisis y macrodatos
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulo-3/" class="md-nav__link">
+        Modulo 3
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Motores
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Motores" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Motores
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_1">
+          Impala
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Impala" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Impala
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../motores/impala/intro/" class="md-nav__link">
+        Introduccion
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Plataformas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Plataformas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Plataformas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_1">
+          Airflow
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Airflow" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_1">
+          <span class="md-nav__icon md-icon"></span>
+          Airflow
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plataforma/airflow/intro/" class="md-nav__link">
+        Introduccion
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" type="checkbox" id="__nav_6_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_2">
+          Databricks
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Databricks" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_2">
+          <span class="md-nav__icon md-icon"></span>
+          Databricks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plataforma/databricks/intro/" class="md-nav__link">
+        Introduccion
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3" type="checkbox" id="__nav_6_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_3">
+          Snowflake
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Snowflake" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_3">
+          <span class="md-nav__icon md-icon"></span>
+          Snowflake
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plataforma/snowflake/intro/" class="md-nav__link">
+        Introduccion
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Lenguajes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lenguajes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Lenguajes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1" type="checkbox" id="__nav_7_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_1">
+          Scala
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Scala" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          Scala
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/scala/intro/" class="md-nav__link">
+        Introduccion
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion-a-los-servicios-de-azure-compute" class="md-nav__link">
+    Introducción a los servicios de Azure Compute
+  </a>
+  
+    <nav class="md-nav" aria-label="Introducción a los servicios de Azure Compute">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maquinas-virtuales" class="md-nav__link">
+    Maquinas Virtuales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#azure-container-instances" class="md-nav__link">
+    Azure Container Instances
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#containers-y-kubernetes" class="md-nav__link">
+    Containers y Kubernetes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apps-services" class="md-nav__link">
+    Apps Services
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funciones" class="md-nav__link">
+    Funciones
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escalado-de-maquinas-virtuales-en-azure" class="md-nav__link">
+    Escalado de máquinas virtuales en Azure
+  </a>
+  
+    <nav class="md-nav" aria-label="Escalado de máquinas virtuales en Azure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-son-los-conjuntos-de-escalado-de-maquinas-virtuales" class="md-nav__link">
+    ¿Qué son los conjuntos de escalado de máquinas virtuales?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-es-azure-batch" class="md-nav__link">
+    ¿Qué es Azure Batch?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azure-app-service" class="md-nav__link">
+    Azure App Service
+  </a>
+  
+    <nav class="md-nav" aria-label="Azure App Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-servicios-de-aplicaciones" class="md-nav__link">
+    Tipos de servicios de aplicaciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicaciones-web" class="md-nav__link">
+    Aplicaciones web
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicaciones-de-api" class="md-nav__link">
+    Aplicaciones de API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trabajos-web" class="md-nav__link">
+    Trabajos web
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicaciones-moviles" class="md-nav__link">
+    Aplicaciones móviles
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azure-container-instances-o-azure-kubernetes-service" class="md-nav__link">
+    Azure Container Instances o Azure Kubernetes Service
+  </a>
+  
+    <nav class="md-nav" aria-label="Azure Container Instances o Azure Kubernetes Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-son-los-contenedores" class="md-nav__link">
+    ¿Qué son los contenedores?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-es-kubernetes" class="md-nav__link">
+    ¿Qué es Kubernetes?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-es-un-microservicio" class="md-nav__link">
+    ¿Qué es un microservicio?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azure-functions" class="md-nav__link">
+    Azure Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azure-virtual-desktop" class="md-nav__link">
+    Azure Virtual Desktop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aspectos-basicos-de-azure-virtual-network" class="md-nav__link">
+    Aspectos básicos de Azure Virtual Network
+  </a>
+  
+    <nav class="md-nav" aria-label="Aspectos básicos de Azure Virtual Network">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-son-las-redes-virtuales-de-azure" class="md-nav__link">
+    ¿Qué son las redes virtuales de Azure?
+  </a>
+  
+    <nav class="md-nav" aria-label="¿Qué son las redes virtuales de Azure?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aislamiento-y-segmentacion" class="md-nav__link">
+    Aislamiento y segmentación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comunicacion-con-internet" class="md-nav__link">
+    Comunicación con Internet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comunicacion-entre-los-recursos-de-azure" class="md-nav__link">
+    Comunicación entre los recursos de Azure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enrutamiento-del-trafico-de-red" class="md-nav__link">
+    Enrutamiento del tráfico de red
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtrado-del-trafico-de-red" class="md-nav__link">
+    Filtrado del tráfico de red
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conexion-de-redes-virtuales" class="md-nav__link">
+    Conexión de redes virtuales
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aspectos-basicos-de-azure-vpn-gateway" class="md-nav__link">
+    Aspectos básicos de Azure VPN Gateway
+  </a>
+  
+    <nav class="md-nav" aria-label="Aspectos básicos de Azure VPN Gateway">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#puertas-de-enlace-de-vpn" class="md-nav__link">
+    Puertas de enlace de VPN
+  </a>
+  
+    <nav class="md-nav" aria-label="Puertas de enlace de VPN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#redes-privadas-virtuales-basadas-en-directivas" class="md-nav__link">
+    Redes privadas virtuales basadas en directivas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redes-privadas-virtuales-basadas-en-rutas" class="md-nav__link">
+    Redes privadas virtuales basadas en rutas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recursos-de-azure-necesarios-para-una-vpn-gateway" class="md-nav__link">
+    Recursos de Azure necesarios para una VPN Gateway
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escenarios-de-alta-disponibilidad" class="md-nav__link">
+    Escenarios de alta disponibilidad
+  </a>
+  
+    <nav class="md-nav" aria-label="Escenarios de alta disponibilidad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-de-activo-en-espera" class="md-nav__link">
+    Configuración de activo-en espera
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activoactivo" class="md-nav__link">
+    Activo/activo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conmutacion-por-error-de-expressroute" class="md-nav__link">
+    Conmutación por error de ExpressRoute
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aspectos-basicos-de-azure-expressroute" class="md-nav__link">
+    Aspectos básicos de Azure ExpressRoute
+  </a>
+  
+    <nav class="md-nav" aria-label="Aspectos básicos de Azure ExpressRoute">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas-y-ventajas-de-expressroute" class="md-nav__link">
+    Características y ventajas de ExpressRoute
+  </a>
+  
+    <nav class="md-nav" aria-label="Características y ventajas de ExpressRoute">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conectividad-de-nivel-3" class="md-nav__link">
+    Conectividad de nivel 3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redundancia-integrada" class="md-nav__link">
+    Redundancia integrada
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conectividad-con-los-servicios-en-la-nube-de-microsoft" class="md-nav__link">
+    Conectividad con los Servicios en la nube de Microsoft
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conectividad-local-con-global-reach-de-expressroute" class="md-nav__link">
+    Conectividad local con Global Reach de ExpressRoute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enrutamiento-dinamico" class="md-nav__link">
+    Enrutamiento dinámico
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelos-de-conectividad-de-expressroute" class="md-nav__link">
+    Modelos de conectividad de ExpressRoute
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelos de conectividad de ExpressRoute">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#coubicacion-en-un-intercambio-en-la-nube" class="md-nav__link">
+    Coubicación en un intercambio en la nube
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conexion-ethernet-de-punto-a-punto" class="md-nav__link">
+    Conexión Ethernet de punto a punto
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redes-universales" class="md-nav__link">
+    Redes universales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consideraciones-sobre-la-seguridad" class="md-nav__link">
+    Consideraciones sobre la seguridad
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aspectos-basicos-de-la-cuenta-de-azure-storage" class="md-nav__link">
+    Aspectos básicos de la cuenta de Azure Storage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aspectos-basicos-de-disk-storage" class="md-nav__link">
+    Aspectos básicos de Disk Storage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aspectos-basicos-de-azure-blob-storage" class="md-nav__link">
+    Aspectos básicos de Azure Blob Storage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aspectos-basicos-de-azure-files" class="md-nav__link">
+    Aspectos básicos de Azure Files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descripcion-de-los-niveles-de-acceso-de-blobs" class="md-nav__link">
+    Descripción de los niveles de acceso de blobs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploracion-de-azure-cosmos-db" class="md-nav__link">
+    Exploración de Azure Cosmos DB
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploracion-de-azure-sql-database" class="md-nav__link">
+    Exploración de Azure SQL Database
+  </a>
+  
+    <nav class="md-nav" aria-label="Exploración de Azure SQL Database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas" class="md-nav__link">
+    Características
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migracion" class="md-nav__link">
+    Migración
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploracion-de-azure-database-for-mysql" class="md-nav__link">
+    Exploración de Azure Database for MySQL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploracion-de-azure-database-for-postgresql" class="md-nav__link">
+    Exploración de Azure Database for PostgreSQL
+  </a>
+  
+    <nav class="md-nav" aria-label="Exploración de Azure Database for PostgreSQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#servidor-unico" class="md-nav__link">
+    Servidor único
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hiperescala-citus" class="md-nav__link">
+    Hiperescala (Citus)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploracion-de-azure-sql-managed-instance" class="md-nav__link">
+    Exploración de Azure SQL Managed Instance
+  </a>
+  
+    <nav class="md-nav" aria-label="Exploración de Azure SQL Managed Instance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas_1" class="md-nav__link">
+    Características
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migracion_1" class="md-nav__link">
+    Migración
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploracion-de-analisis-y-macrodatos" class="md-nav__link">
+    Exploración de análisis y macrodatos
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="azure-modulo-2">Azure modulo 2<a class="headerlink" href="#azure-modulo-2" title="Permanent link">&para;</a></h1>
+<h2 id="introduccion-a-los-servicios-de-azure-compute">Introducción a los servicios de Azure Compute<a class="headerlink" href="#introduccion-a-los-servicios-de-azure-compute" title="Permanent link">&para;</a></h2>
+<p>Azure Compute es un servicio de informática a petición para ejecutar aplicaciones basadas en la nube. Solo se paga por los recursos que se usan y solo durante el tiempo que se usan, disponibles en minutos o segundos.</p>
+<p>los servicios más destacados son los siguientes:</p>
+<ul>
+<li>Azure Virtual Machines</li>
+<li>Azure Container Instances</li>
+<li>Azure App Service</li>
+<li>Azure Functions (o <em>informática sin servidor</em>)</li>
+</ul>
+<p><img alt="Captura de pantalla de la página de servicios de proceso de Azure Portal, que incluye máquinas virtuales y contenedores." src="https://docs.microsoft.com/es-es/learn/azure-fundamentals/azure-compute-fundamentals/media/compute-services-13e531e1.png" /></p>
+<h3 id="maquinas-virtuales">Maquinas Virtuales<a class="headerlink" href="#maquinas-virtuales" title="Permanent link">&para;</a></h3>
+<p>Puede crear y utilizar máquinas virtuales en la nube. Virtual Machines proporciona infraestructura como servicio (IaaS) y se puede usar de maneras diferentes. Cuando necesite un control total sobre el entorno y el sistema operativo, las máquinas virtuales son la opción idónea.</p>
+<h3 id="azure-container-instances">Azure Container Instances<a class="headerlink" href="#azure-container-instances" title="Permanent link">&para;</a></h3>
+<p>Son un recurso de Azure Compute que puede usar para implementar y administrar un conjunto de máquinas virtuales idénticas. </p>
+<p>es más sencillo compilar servicios a gran escala cuyo destino sean las cargas de trabajo en contenedores, de macroproceso y macrodatos. A medida que la demanda aumente, se pueden agregar más instancias de máquina virtual. A medida que la demanda disminuya, se pueden quitar más instancias de máquina virtual. El proceso puede ser manual, automatizado o una combinación de ambos.</p>
+<h3 id="containers-y-kubernetes">Containers y Kubernetes<a class="headerlink" href="#containers-y-kubernetes" title="Permanent link">&para;</a></h3>
+<p>Son recursos de Azure Compute que puede usar para implementar contenedores y administrarlos. Los contenedores son entornos de aplicación ligeros y virtualizados. Están diseñados para crearse, escalarse horizontalmente y detenerse dinámicamente de forma rápida. Puede ejecutar varias instancias de una aplicación en contenedores en un único equipo host.</p>
+<h3 id="apps-services">Apps Services<a class="headerlink" href="#apps-services" title="Permanent link">&para;</a></h3>
+<p>Con Azure App Service puede compilar, implementar y escalar de forma rápida aplicaciones de API, móviles y web de nivel empresarial que se pueden ejecutar en cualquier plataforma. App Service es una oferta de plataforma como servicio (PaaS).</p>
+<h3 id="funciones">Funciones<a class="headerlink" href="#funciones" title="Permanent link">&para;</a></h3>
+<p>s una opción ideal si le preocupa solo el código que ejecuta el servicio y no la infraestructura o la plataforma subyacente. Se usan normalmente cuando se debe realizar un trabajo en respuesta a un evento (a menudo a través de una solicitud REST), un temporizador o un mensaje de otro servicio de Azure, y cuando ese trabajo puede completarse rápidamente, en segundos o en menos tiempo.</p>
+<h2 id="escalado-de-maquinas-virtuales-en-azure">Escalado de máquinas virtuales en Azure<a class="headerlink" href="#escalado-de-maquinas-virtuales-en-azure" title="Permanent link">&para;</a></h2>
+<p>Se pueden ejecutar máquinas virtuales únicas para pruebas, desarrollo o tareas secundarias. También se pueden agrupar las máquinas virtuales para proporcionar alta disponibilidad, escalabilidad y redundancia. Con independencia de cuáles sean los requisitos de tiempo de actividad. Estas características son:</p>
+<ul>
+<li>Conjuntos de escalado de máquinas virtuales</li>
+<li>Azure Batch</li>
+</ul>
+<h3 id="que-son-los-conjuntos-de-escalado-de-maquinas-virtuales">¿Qué son los conjuntos de escalado de máquinas virtuales?<a class="headerlink" href="#que-son-los-conjuntos-de-escalado-de-maquinas-virtuales" title="Permanent link">&para;</a></h3>
+<p>Los conjuntos de escalado de máquinas virtuales permiten crear y administrar un grupo de máquinas virtuales idénticas, de carga equilibrada.</p>
+<h3 id="que-es-azure-batch">¿Qué es Azure Batch?<a class="headerlink" href="#que-es-azure-batch" title="Permanent link">&para;</a></h3>
+<p>Azure Batch permite trabajo por lotes paralelos a gran escala y de informática de alto rendimiento (HPC) con la capacidad de escalar a decenas, cientos o miles de máquinas virtuales.</p>
+<p>Cuando esté listo para ejecutar un trabajo, Batch:</p>
+<ul>
+<li>Iniciará un grupo de máquinas virtuales de proceso de forma automática.</li>
+<li>Instalará aplicaciones y datos de almacenamiento provisional.</li>
+<li>Ejecutará trabajos con tantas tareas como tenga.</li>
+<li>Identificará errores.</li>
+<li>Reordenará la cola de trabajo.</li>
+<li>Reducirá verticalmente el grupo a medida que se complete el trabajo.</li>
+</ul>
+<h2 id="azure-app-service">Azure App Service<a class="headerlink" href="#azure-app-service" title="Permanent link">&para;</a></h2>
+<h3 id="tipos-de-servicios-de-aplicaciones">Tipos de servicios de aplicaciones<a class="headerlink" href="#tipos-de-servicios-de-aplicaciones" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Aplicaciones web</li>
+<li>Aplicaciones de API</li>
+<li>Trabajos web</li>
+<li>Aplicaciones móviles</li>
+</ul>
+<p>App Service controla la mayoría de las decisiones sobre la infraestructura que se tratan en el hospedaje de aplicaciones accesibles desde la web:</p>
+<ul>
+<li>La implementación y administración se integran en la plataforma.</li>
+<li>Los puntos de conexión se pueden proteger.</li>
+<li>Los sitios se pueden escalar rápidamente para controlar cargas de tráfico elevado.</li>
+<li>El equilibrio de carga integrado y el administrador de tráfico proporcionan alta disponibilidad.</li>
+</ul>
+<h3 id="aplicaciones-web">Aplicaciones web<a class="headerlink" href="#aplicaciones-web" title="Permanent link">&para;</a></h3>
+<p>Incluye compatibilidad completa para hospedar aplicaciones web mediante ASP.NET, ASP.NET Core, Java, Ruby, Node.js, PHP o Python. Puede elegir Windows o Linux como sistema operativo del host.</p>
+<h3 id="aplicaciones-de-api">Aplicaciones de API<a class="headerlink" href="#aplicaciones-de-api" title="Permanent link">&para;</a></h3>
+<p>Compilar API web basadas en REST mediante el lenguaje y el marco que prefiera. Se obtiene compatibilidad completa con Swagger y la posibilidad de empaquetar y publicar la API en Azure Marketplace. Las aplicaciones producidas se pueden consumir desde cualquier cliente basado en HTTP o HTTPS.</p>
+<h3 id="trabajos-web">Trabajos web<a class="headerlink" href="#trabajos-web" title="Permanent link">&para;</a></h3>
+<p>Se puede usar la característica WebJobs para ejecutar un programa (.exe, Java, PHP, Python o Node.js) o un script (.cmd, .bat, PowerShell o Bash) en el mismo contexto que una aplicación web, aplicación de API o aplicación móvil. Los puede programar o ejecutar un desencadenador. Los trabajos web suelen usarse para ejecutar tareas en segundo plano como parte de la lógica de aplicación.</p>
+<h3 id="aplicaciones-moviles">Aplicaciones móviles<a class="headerlink" href="#aplicaciones-moviles" title="Permanent link">&para;</a></h3>
+<p>Use la característica Mobile Apps de App Service a fin de compilar rápidamente un back-end para aplicaciones iOS y Android. Con unos pocos clics en Azure Portal, puede realizar lo siguiente:</p>
+<ul>
+<li>Almacenar los datos de aplicaciones móviles en una base de datos SQL basada en la nube.</li>
+<li>Autenticar a clientes con proveedores sociales comunes, como MSA, Google, Twitter y Facebook.</li>
+<li>Enviar notificaciones de inserción.</li>
+<li>Ejecutar lógica de back-end personalizada en C# o Node.js.</li>
+</ul>
+<p>En el lado de la aplicación móvil, hay compatibilidad con el SDK para aplicaciones nativas de iOS y Android, Xamarin y React.</p>
+<h2 id="azure-container-instances-o-azure-kubernetes-service">Azure Container Instances o Azure Kubernetes Service<a class="headerlink" href="#azure-container-instances-o-azure-kubernetes-service" title="Permanent link">&para;</a></h2>
+<h3 id="que-son-los-contenedores">¿Qué son los contenedores?<a class="headerlink" href="#que-son-los-contenedores" title="Permanent link">&para;</a></h3>
+<p>Son un entorno de virtualización. Al igual que la ejecución de varias máquinas virtuales en un solo host físico, se pueden ejecutar varios contenedores en un solo host físico o virtual. A diferencia de las máquinas virtuales, no se administra el sistema operativo de un contenedor. Las máquinas virtuales parecen ser una instancia de un sistema operativo que se puede conectar y administrar, sin embargo los contenedores son ligeros y están diseñados para crearse, escalarse horizontalmente y detenerse de forma dinámica. Con los contenedores, puede reiniciar rápidamente en caso de bloqueo o interrupción del hardware.</p>
+<h3 id="que-es-kubernetes">¿Qué es Kubernetes?<a class="headerlink" href="#que-es-kubernetes" title="Permanent link">&para;</a></h3>
+<p>Los contenedores se administran a través de un orquestador de contenedores, que puede iniciar, detener y escalar horizontalmente las instancias de la aplicación, según sea necesario. Hay dos maneras de administrar los contenedores basados en Microsoft y Docker en Azure: Azure Container Instances y Azure Kubernetes Service (AKS).</p>
+<h3 id="que-es-un-microservicio">¿Qué es un microservicio?<a class="headerlink" href="#que-es-un-microservicio" title="Permanent link">&para;</a></h3>
+<p>Es un servicio web con ámbito reducido y bien definido y acoplado de forma flexible con otros servicios web.</p>
+<h2 id="azure-functions">Azure Functions<a class="headerlink" href="#azure-functions" title="Permanent link">&para;</a></h2>
+<p>es ideal si le preocupa solo el código que ejecuta el servicio, pero no la infraestructura o la plataforma subyacentes. Las funciones se usan normalmente cuando se debe realizar un trabajo en respuesta a un evento (a menudo a través de una solicitud REST), un temporizador o un mensaje de otro servicio de Azure, y cuando ese trabajo puede completarse rápidamente, en segundos o en menos tiempo.</p>
+<h2 id="azure-virtual-desktop">Azure Virtual Desktop<a class="headerlink" href="#azure-virtual-desktop" title="Permanent link">&para;</a></h2>
+<p>Es un servicio de virtualización de escritorios y aplicaciones que se ejecuta en la nube. Permite que los usuarios usen una versión hospedada en la nube de Windows desde cualquier ubicación. Azure Virtual Desktop funciona en dispositivos como Windows, Mac, iOS, Android y Linux. Funciona con aplicaciones que se pueden usar para acceder a aplicaciones y escritorios remotos. También puede usar la mayoría de los exploradores modernos para acceder a experiencias hospedadas en Azure Virtual Desktop.</p>
+<h2 id="aspectos-basicos-de-azure-virtual-network">Aspectos básicos de Azure Virtual Network<a class="headerlink" href="#aspectos-basicos-de-azure-virtual-network" title="Permanent link">&para;</a></h2>
+<h3 id="que-son-las-redes-virtuales-de-azure">¿Qué son las redes virtuales de Azure?<a class="headerlink" href="#que-son-las-redes-virtuales-de-azure" title="Permanent link">&para;</a></h3>
+<p>Las <em>redes virtuales de Azure</em> permiten a los recursos de Azure, como las máquinas virtuales, las aplicaciones web y las bases de datos, comunicarse entre sí, con los usuarios de Internet y con los equipos cliente en el entorno local.</p>
+<p>Las redes virtuales de Azure proporcionan las importantes funcionalidades de red siguientes:</p>
+<ul>
+<li>Aislamiento y segmentación</li>
+<li>Comunicación con Internet</li>
+<li>Comunicación entre recursos de Azure</li>
+<li>Comunicación con los recursos locales</li>
+<li>Enrutamiento del tráfico de red</li>
+<li>Filtrado del tráfico de red</li>
+<li>Conexión de redes virtuales</li>
+</ul>
+<h4 id="aislamiento-y-segmentacion">Aislamiento y segmentación<a class="headerlink" href="#aislamiento-y-segmentacion" title="Permanent link">&para;</a></h4>
+<p>Virtual Network permite crear varias redes virtuales aisladas. Al configurar una red virtual, se define un espacio de direcciones IP privadas con intervalos de direcciones IP públicas o privadas. Después, puede dividir ese espacio de direcciones IP en subredes y asignar parte del espacio de direcciones definido a cada subred con nombre</p>
+<h4 id="comunicacion-con-internet">Comunicación con Internet<a class="headerlink" href="#comunicacion-con-internet" title="Permanent link">&para;</a></h4>
+<p>Una máquina virtual en Azure se puede conectar a Internet de forma predeterminada. Puede habilitar las comunicaciones entrantes desde Internet si define una dirección IP pública o un equilibrador de carga público. Para la administración de la máquina virtual, puede conectarse a través de la CLI de Azure, el Protocolo de escritorio remoto o Secure Shell.</p>
+<h4 id="comunicacion-entre-los-recursos-de-azure">Comunicación entre los recursos de Azure<a class="headerlink" href="#comunicacion-entre-los-recursos-de-azure" title="Permanent link">&para;</a></h4>
+<p>Las redes virtuales de Azure permiten vincular entre sí los recursos del entorno local y dentro de la suscripción de Azure. Existen tres mecanismos para lograr esta conectividad:</p>
+<ul>
+<li><strong>Redes privadas virtuales de punto a sitio</strong> el equipo cliente inicia una conexión VPN cifrada para conectar ese equipo a la red virtual de Azure.</li>
+<li><strong>Redes virtuales privadas de sitio a sitio</strong> Una VPN de sitio a sitio vincula un dispositivo o puerta de enlace de VPN local con la puerta de enlace de VPN de Azure en una red virtual. La conexión se cifra y funciona a través de Internet.</li>
+<li><strong>Azure ExpressRoute</strong> proporciona una conectividad privada dedicada a Azure que no viaja a través de Internet.</li>
+</ul>
+<h4 id="enrutamiento-del-trafico-de-red">Enrutamiento del tráfico de red<a class="headerlink" href="#enrutamiento-del-trafico-de-red" title="Permanent link">&para;</a></h4>
+<p>De forma predeterminada, Azure enruta el tráfico entre las subredes de todas las redes virtuales conectadas, las redes locales e Internet. También puede controlar el enrutamiento e invalidar esa configuración del siguiente modo:</p>
+<ul>
+<li><strong>Tablas de rutas</strong> Una tabla de rutas permite definir reglas para dirigir el tráfico. Puede crear tablas de rutas personalizadas que controlen cómo se enrutan los paquetes entre las subredes.</li>
+<li><strong>Protocolo de puerta de enlace de borde</strong> El Protocolo de puerta de enlace de borde (BGP) funciona con puertas de enlace de VPN de Azure o con ExpressRoute para propagar las rutas BGP locales a las redes virtuales de Azure.</li>
+</ul>
+<h4 id="filtrado-del-trafico-de-red">Filtrado del tráfico de red<a class="headerlink" href="#filtrado-del-trafico-de-red" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Grupos de seguridad de red</strong> Un grupo de seguridad de red es un recurso de Azure que puede contener varias reglas de seguridad de entrada y salida. Estas reglas se pueden definir para permitir o bloquear el tráfico en función de factores como el protocolo, el puerto y las direcciones IP de destino y origen.</li>
+<li><strong>Aplicaciones virtuales de red</strong> Una aplicación virtual de red es una máquina virtual especializada que se puede comparar con un dispositivo de red protegido. Una aplicación virtual de red ejerce una función de red determinada, como ejecutar un firewall o realizar la optimización de la red de área extensa (WAN).</li>
+</ul>
+<h3 id="conexion-de-redes-virtuales">Conexión de redes virtuales<a class="headerlink" href="#conexion-de-redes-virtuales" title="Permanent link">&para;</a></h3>
+<p>Puede vincular redes virtuales entre sí mediante el <em>emparejamiento</em> de red virtual. El emparejamiento permite que los recursos de cada red virtual se comuniquen entre sí. Estas redes virtuales pueden estar en regiones distintas, lo que permite crear una red global interconectada con Azure.</p>
+<p>UDR es enrutamiento definido por el usuario. Se trata de una actualización importante de las redes virtuales de Azure, ya que permite a los administradores de red controlar las tablas de enrutamiento entre las subredes de una red virtual, así como entre redes virtuales, lo que permite un mayor control sobre el flujo de tráfico de red.</p>
+<p><img alt="Ilustración de una puerta de enlace local o remota en una red virtual emparejada." src="https://docs.microsoft.com/es-es/learn/azure-fundamentals/azure-networking-fundamentals/media/local-or-remote-gateway-in-peered-virual-network-21106a38.png" /></p>
+<h2 id="aspectos-basicos-de-azure-vpn-gateway">Aspectos básicos de Azure VPN Gateway<a class="headerlink" href="#aspectos-basicos-de-azure-vpn-gateway" title="Permanent link">&para;</a></h2>
+<p>Las redes privadas virtuales usan un túnel cifrado en otra red. El tráfico se cifra mientras viaja por la red que no es de confianza para evitar ataques de interceptación o de otro tipo.</p>
+<h3 id="puertas-de-enlace-de-vpn">Puertas de enlace de VPN<a class="headerlink" href="#puertas-de-enlace-de-vpn" title="Permanent link">&para;</a></h3>
+<p>Una puerta de enlace de VPN es un tipo de puerta de enlace de red virtual. Las instancias de Azure VPN Gateway se implementan en instancias de Azure Virtual Network y habilitan la conectividad siguiente:</p>
+<ul>
+<li>Conectar los centros de datos locales a redes virtuales a través de una conexión de <em>sitio a sitio</em>.</li>
+<li>Conectar los dispositivos individuales a redes virtuales a través de una conexión de <em>punto a sitio</em>.</li>
+<li>Conectar las redes virtuales a otras redes virtuales a través de una conexión <em>entre redes</em>.</li>
+</ul>
+<p><img alt="Visualización de una conexión VPN a Azure." src="https://docs.microsoft.com/es-es/learn/azure-fundamentals/azure-networking-fundamentals/media/vpngateway-site-to-site-connection-diagram-0e1e7db2.png" /></p>
+<h4 id="redes-privadas-virtuales-basadas-en-directivas">Redes privadas virtuales basadas en directivas<a class="headerlink" href="#redes-privadas-virtuales-basadas-en-directivas" title="Permanent link">&para;</a></h4>
+<p>Las instancias de VPN Gateway basadas en directivas especifican de forma estática la dirección IP de los paquetes que se deben cifrar a través de cada túnel. Este tipo de dispositivo evalúa cada paquete de datos en función de los conjuntos de direcciones IP para elegir el túnel a través del cual se va a enviar el paquete.</p>
+<p>Entre las características clave de las instancias de VPN Gateway basadas en directivas en Azure se incluyen:</p>
+<ul>
+<li>Compatibilidad solo con IKEv1, que es se usa para establecer una asociación de seguridad (un contrato del cifrado) entre dos puntos de conexión.</li>
+<li>Uso del <em>enrutamiento estático</em>, en el que las combinaciones de prefijos de dirección de ambas redes controlan cómo se cifra y descifra el tráfico a través del túnel VPN. El origen y destino de las redes de túnel se declaran en la directiva y no necesitan declararse en las tablas de enrutamiento.</li>
+<li>Las redes privadas virtuales basadas en directivas se deben usar en escenarios específicos que las necesiten, por ejemplo, para ofrecer compatibilidad con dispositivos de red privada virtual locales heredados.</li>
+</ul>
+<h4 id="redes-privadas-virtuales-basadas-en-rutas">Redes privadas virtuales basadas en rutas<a class="headerlink" href="#redes-privadas-virtuales-basadas-en-rutas" title="Permanent link">&para;</a></h4>
+<p>Si la definición de las direcciones IP que están detrás de cada túnel es demasiado compleja, se pueden usar puertas de enlace basadas en rutas. Con las puertas de enlace basadas en rutas, los túneles IPSec (protocolo de seguridad de Internet)  se modelan como una interfaz de red o una interfaz de túnel virtual. El enrutamiento IP (ya sean rutas estáticas o protocolos de enrutamiento dinámico) decide cuál de estas interfaces de túnel se va a usar al enviar cada paquete. Las redes privadas virtuales basadas en rutas son el método preferido para conectar dispositivos locales. Son más resistentes a los cambios de la topología, como la creación de subredes.</p>
+<p>Si necesita alguno de los siguientes tipos de conectividad, use una instancia de VPN Gateway basada en rutas:</p>
+<ul>
+<li>Conexiones entre redes virtuales</li>
+<li>Conexiones de punto a sitio</li>
+<li>Conexiones de varios sitios</li>
+<li>Coexistencia con una puerta de enlace de Azure ExpressRoute</li>
+</ul>
+<p>Entre las características clave de las instancias de VPN Gateway basadas en rutas en Azure se incluyen:</p>
+<ul>
+<li>Compatibilidad con IKEv2</li>
+<li>Uso de selectores de tráfico universales (comodín)</li>
+<li>Puede usar <em>protocolos de enrutamiento dinámico</em>, donde las tablas de enrutamiento y reenvío dirigen el tráfico a diferentes túneles IPSec. En este caso, las redes de origen y destino no se definen estáticamente como en las VPN basadas en directivas o incluso en las VPN basadas en rutas con enrutamiento estático. En su lugar, los paquetes de datos se cifran en función de las tablas de enrutamiento de red que se crean de forma dinámica mediante protocolos de enrutamiento, como el Protocolo de puerta de enlace de borde (BGP).</li>
+</ul>
+<h3 id="recursos-de-azure-necesarios-para-una-vpn-gateway">Recursos de Azure necesarios para una VPN Gateway<a class="headerlink" href="#recursos-de-azure-necesarios-para-una-vpn-gateway" title="Permanent link">&para;</a></h3>
+<p>Se necesitarán estos recursos de Azure para poder implementar una instancia de VPN Gateway operativa:</p>
+<ul>
+<li>
+<p><strong>Red virtual</strong></p>
+</li>
+<li>
+<p><strong>GatewaySubnet</strong>. Implemente una subred llamada <code>GatewaySubnet</code> para la instancia de VPN Gateway. Use al menos una máscara de dirección <strong>/27</strong> con el fin de asegurarse de que proporciona suficientes direcciones IP en la subred para un crecimiento futuro. Esta subred no se puede usar para otros servicios.</p>
+</li>
+<li>
+<p><strong>Dirección IP pública</strong>. Cree una dirección IP pública dinámica de SKU básico si usa una puerta de enlace que no tenga en cuenta la zona</p>
+</li>
+<li>
+<p><strong>Puerta de enlace de red local</strong>. Cree una puerta de enlace de red local para definir la configuración de la red local. Esta información la usa la instancia de VPN Gateway con el fin de enrutar paquetes destinados para las redes locales a través del túnel IPSec.</p>
+</li>
+<li>
+<p><strong>Puerta de enlace de red virtual</strong>. Cree la puerta de enlace de red virtual para enrutar el tráfico entre la red virtual y el centro de datos local u otras redes virtuales.</p>
+</li>
+<li>
+<p><strong>Conexión</strong>. Cree un recurso de conexión para crear una conexión lógica entre la instancia de VPN Gateway y la puerta de enlace de red local.</p>
+</li>
+<li>
+<p>La conexión se realiza a las direcciones IPv4 del dispositivo VPN local, tal como define la puerta de enlace de red local.</p>
+</li>
+<li>La conexión se realiza desde la puerta de enlace de red virtual y la dirección IP pública asociada.</li>
+</ul>
+<p>Se pueden crear varias conexiones.</p>
+<p><img alt="Visualización de los requisitos de recursos para una instancia de VPN Gateway" src="https://docs.microsoft.com/es-es/learn/azure-fundamentals/azure-networking-fundamentals/media/resource-requirements-for-vpn-gateway-2518703e.png" /></p>
+<h2 id="escenarios-de-alta-disponibilidad">Escenarios de alta disponibilidad<a class="headerlink" href="#escenarios-de-alta-disponibilidad" title="Permanent link">&para;</a></h2>
+<p>Hay varias opciones para asegurarse de que se tiene una configuración de tolerancia a errores.</p>
+<h3 id="configuracion-de-activo-en-espera">Configuración de activo-en espera<a class="headerlink" href="#configuracion-de-activo-en-espera" title="Permanent link">&para;</a></h3>
+<p>De forma predeterminada, las instancias de VPN Gateway se implementan como dos instancias en una configuración de activo-en espera, incluso si solo ve un recurso de VPN Gateway en Azure. Cuando el mantenimiento planeado o la interrupción imprevista afectan a la instancia activa, la instancia en espera asume de forma automática la responsabilidad de las conexiones sin ninguna intervención del usuario. Durante esta conmutación por error, las conexiones se interrumpen, pero por lo general se restauran en cuestión de segundos si se trata del mantenimiento planeado y en un plazo de 90 segundos en el caso de las interrupciones imprevistas.</p>
+<p><img alt="Visualización de la puerta de enlace de red virtual activa-en espera" src="https://docs.microsoft.com/es-es/learn/azure-fundamentals/azure-networking-fundamentals/media/active-standby-c4a3c14d.png" /></p>
+<h3 id="activoactivo">Activo/activo<a class="headerlink" href="#activoactivo" title="Permanent link">&para;</a></h3>
+<p>Al incorporar compatibilidad con el protocolo de enrutamiento de BGP, también puede implementar puertas de enlace VPN en una configuración del tipo activo/activo. En esta configuración, se asigna una IP pública única a cada instancia. Después, se crean túneles independientes desde el dispositivo local a cada dirección IP. Se puede ampliar la alta disponibilidad mediante la implementación de un dispositivo VPN local adicional.</p>
+<p><img alt="Visualización de la puerta de enlace de red virtual activa-activa" src="https://docs.microsoft.com/es-es/learn/azure-fundamentals/azure-networking-fundamentals/media/dual-redundancy-d76100c9.png" /></p>
+<h3 id="conmutacion-por-error-de-expressroute">Conmutación por error de ExpressRoute<a class="headerlink" href="#conmutacion-por-error-de-expressroute" title="Permanent link">&para;</a></h3>
+<p>consiste en configurar una instancia de VPN Gateway como una ruta segura de conmutación por error para las conexiones ExpressRoute. Los circuitos ExpressRoute tienen resistencia integrada. Sin embargo, no son inmunes a los problemas físicos que afectan a los cables que entregan conectividad ni a las interrupciones que afectan a la ubicación completa de ExpressRoute. En escenarios de alta disponibilidad, en los que existe un riesgo asociado a una interrupción de un circuito ExpressRoute, también puede aprovisionar una instancia de VPN Gateway que usa Internet como un método alternativo de conectividad. De este modo, puede garantizar que siempre haya una conexión a las redes virtuales.</p>
+<h2 id="aspectos-basicos-de-azure-expressroute">Aspectos básicos de Azure ExpressRoute<a class="headerlink" href="#aspectos-basicos-de-azure-expressroute" title="Permanent link">&para;</a></h2>
+<p>ExpressRoute le permite ampliar las redes locales a la nube de Microsoft mediante una conexión privada con la ayuda de un proveedor de conectividad.</p>
+<p>La conectividad puede ser desde una red de conectividad universal (IP VPN), una red Ethernet de punto a punto o una conexión cruzada virtual a través de un proveedor de conectividad en una instalación de ubicación compartida. Las conexiones de ExpressRoute no pasan por la red pública de Internet. Esto permite a las conexiones de ExpressRoute ofrecer más confiabilidad, más velocidad, latencia coherentes y mayor seguridad que las conexiones normales a través de Internet. Para información sobre cómo conectar la red a Microsoft mediante ExpressRoute, consulte ExpressRoute connectivity models (Modelos de conectividad de ExpressRoute).</p>
+<p><img alt="Visualización en la que se muestra una introducción de alto nivel sobre el servicio Azure ExpressRoute" src="https://docs.microsoft.com/es-es/learn/azure-fundamentals/azure-networking-fundamentals/media/azure-expressroute-overview-5520731d.png" /></p>
+<p>Modelo de interconexión de sistemas abiertos (OSI):</p>
+<ul>
+<li><strong>Nivel 2 (L2)</strong>: se trata del nivel de vínculo de datos, que proporciona una comunicación de nodo a nodo entre dos nodos de la misma red.</li>
+<li><strong>Nivel 3 (L3)</strong>: se trata del nivel de red, que proporciona el direccionamiento y enrutamiento entre los nodos de una red de varios nodos.</li>
+</ul>
+<h3 id="caracteristicas-y-ventajas-de-expressroute">Características y ventajas de ExpressRoute<a class="headerlink" href="#caracteristicas-y-ventajas-de-expressroute" title="Permanent link">&para;</a></h3>
+<p>El uso de ExpressRoute como servicio de conexión entre Azure y las redes locales tiene varias ventajas.</p>
+<ul>
+<li>Conectividad de nivel 3 entre su red local y Microsoft Cloud a través de un proveedor de conectividad. La conectividad puede ser desde una red de conectividad universal (IP VPN), una red Ethernet de punto a punto, o una conexión cruzada virtual a través de un intercambio de Ethernet.</li>
+<li>Conectividad de servicios en la nube de Microsoft en todas las regiones dentro de la región geopolítica.</li>
+<li>Conectividad global a los servicios de Microsoft en todas las regiones con el complemento ExpressRoute Premium.</li>
+<li>Enrutamiento dinámico entre la red y Microsoft a través de BGP.</li>
+<li>Redundancia integrada en todas las ubicaciones de configuración entre pares para una mayor confiabilidad.</li>
+<li>El tiempo de actividad de conexión SLA.</li>
+<li>Compatibilidad con QoS de Skype para la empresa.</li>
+</ul>
+<h4 id="conectividad-de-nivel-3">Conectividad de nivel 3<a class="headerlink" href="#conectividad-de-nivel-3" title="Permanent link">&para;</a></h4>
+<p>ExpressRoute proporciona conectividad de nivel 3 (nivel de dirección) entre la red local y la nube de Microsoft a través de asociados de conectividad. Estas conexiones pueden ser de una red punto a punto o universal. También puede tratarse de conexiones cruzadas virtuales a través de un intercambio.</p>
+<h4 id="redundancia-integrada">Redundancia integrada<a class="headerlink" href="#redundancia-integrada" title="Permanent link">&para;</a></h4>
+<p>Cada proveedor de conectividad usa dispositivos redundantes para garantizar que las conexiones establecidas con Microsoft tengan alta disponibilidad. Puede configurar varios circuitos para complementar esta característica. Todas las conexiones redundantes se configuran con conectividad de nivel 3 para cumplir los Acuerdos de Nivel de Servicio.</p>
+<h4 id="conectividad-con-los-servicios-en-la-nube-de-microsoft">Conectividad con los Servicios en la nube de Microsoft<a class="headerlink" href="#conectividad-con-los-servicios-en-la-nube-de-microsoft" title="Permanent link">&para;</a></h4>
+<p>ExpressRoute permite el acceso directo a los siguientes servicios en todas las regiones:</p>
+<ul>
+<li>Microsoft Office 365</li>
+<li>Microsoft Dynamics 365</li>
+<li>Servicios de proceso de Azure, como Azure Virtual Machines</li>
+<li>Servicios en la nube de Azure, como Azure Cosmos DB y Azure Storage</li>
+</ul>
+<p>Office 365 se creó para tener acceso a él de forma segura y fiable a través de Internet. </p>
+<h4 id="conectividad-local-con-global-reach-de-expressroute">Conectividad local con Global Reach de ExpressRoute<a class="headerlink" href="#conectividad-local-con-global-reach-de-expressroute" title="Permanent link">&para;</a></h4>
+<p>Puede permitir que Global Reach de ExpressRoute intercambie datos entre los sitios locales si conecta los diferentes circuitos ExpressRoute. El tráfico de los centros de datos viajará a través de la red de Microsoft.</p>
+<h4 id="enrutamiento-dinamico">Enrutamiento dinámico<a class="headerlink" href="#enrutamiento-dinamico" title="Permanent link">&para;</a></h4>
+<p>ExpressRoute usa el protocolo de enrutamiento Protocolo de puerta de enlace de borde (BGP). BGP se usa para intercambiar rutas entre las redes locales y los recursos que se ejecutan en Azure. Este protocolo permite el enrutamiento dinámico entre la red local y los servicios que se ejecutan en la nube de Microsoft.</p>
+<h3 id="modelos-de-conectividad-de-expressroute">Modelos de conectividad de ExpressRoute<a class="headerlink" href="#modelos-de-conectividad-de-expressroute" title="Permanent link">&para;</a></h3>
+<p>ExpressRoute admite tres modelos que puede usar para conectar la red local con la nube de Microsoft:</p>
+<ul>
+<li>Ubicación de CloudExchange</li>
+<li>Conexión Ethernet de punto a punto</li>
+<li>Conexión universal</li>
+</ul>
+<p><img alt="Visualización de modelos de conectividad de Azure" src="https://docs.microsoft.com/es-es/learn/azure-fundamentals/azure-networking-fundamentals/media/azure-connectivity-models-4deabab1.png" /></p>
+<h4 id="coubicacion-en-un-intercambio-en-la-nube">Coubicación en un intercambio en la nube<a class="headerlink" href="#coubicacion-en-un-intercambio-en-la-nube" title="Permanent link">&para;</a></h4>
+<p>Normalmente, los proveedores de coubicación pueden ofrecer conexiones de nivel 2 y nivel 3 entre la infraestructura, que puede encontrarse en las instalación de la coubicación, y la nube de Microsoft. Por ejemplo, si el centro de datos tiene la ubicación compartida en un intercambio en la nube, como un ISP, puede solicitar una conexión cruzada virtual a la nube de Microsoft.</p>
+<h4 id="conexion-ethernet-de-punto-a-punto">Conexión Ethernet de punto a punto<a class="headerlink" href="#conexion-ethernet-de-punto-a-punto" title="Permanent link">&para;</a></h4>
+<p>Las conexiones de punto a punto proporcionan conectividad de nivel 2 y nivel 3 entre el sitio local y Azure. Puede conectar sus oficinas o centros de datos a Azure mediante vínculos de punto a punto. Por ejemplo, si tiene un centro de datos local, puede usar un vínculo de Ethernet de punto a punto para conectarse a Microsoft.</p>
+<h4 id="redes-universales">Redes universales<a class="headerlink" href="#redes-universales" title="Permanent link">&para;</a></h4>
+<p>Con la conectividad universal, puede integrar la red de área extensa (WAN) con Azure si proporciona conexiones a las oficinas y los centros de datos. Azure se integra con la conexión WAN para proporcionarle una conexión, como la que tendría entre el centro de datos y las sucursales.</p>
+<p>Con las conexiones universales, todos los proveedores de WAN ofrecen conectividad de nivel 3. Por ejemplo, si ya usa la conmutación de etiquetas de multiprotocolo para conectarse a las sucursales o a otros sitios de la organización, una conexión ExpressRoute a Microsoft se comporta como cualquier otra ubicación en la WAN privada.</p>
+<h4 id="consideraciones-sobre-la-seguridad">Consideraciones sobre la seguridad<a class="headerlink" href="#consideraciones-sobre-la-seguridad" title="Permanent link">&para;</a></h4>
+<p>Con ExpressRoute los datos no viajan a través de la red pública de Internet y, por tanto, no se exponen a los posibles riesgos asociados a las comunicaciones de Internet. ExpressRoute es una conexión privada de la infraestructura local a la infraestructura de Azure. Incluso si tiene una conexión ExpressRoute, las consultas de DNS, la comprobación de la lista de revocación de certificados y las solicitudes de Azure Content Delivery Network se siguen enviando a través de la red pública de Internet.</p>
+<h2 id="aspectos-basicos-de-la-cuenta-de-azure-storage">Aspectos básicos de la cuenta de Azure Storage<a class="headerlink" href="#aspectos-basicos-de-la-cuenta-de-azure-storage" title="Permanent link">&para;</a></h2>
+<p>Es un servicio que puede usar para almacenar archivos, mensajes, tablas y otros tipos de información. Los clientes como sitios web, aplicaciones móviles, aplicaciones de escritorio y muchos otros tipos de soluciones personalizadas pueden leer y escribir datos en Azure Storage. Azure Storage también se usa en máquinas virtuales de infraestructura como servicio y en servicios en la nube de plataforma como servicio.</p>
+<p>Una cuenta de almacenamiento proporciona un espacio de nombres único para los datos de Azure Storage, al que se puede acceder desde cualquier lugar del mundo a través de HTTP o HTTPS. Los datos de esta cuenta son seguros, de alta disponibilidad, duraderos y escalables de forma masiva.</p>
+<h2 id="aspectos-basicos-de-disk-storage">Aspectos básicos de Disk Storage<a class="headerlink" href="#aspectos-basicos-de-disk-storage" title="Permanent link">&para;</a></h2>
+<p>Disk Storage proporciona discos para Azure Virtual Machines. Las aplicaciones y otros servicios pueden acceder a estos discos y usarlos cuando sea necesario</p>
+<p>Los discos tienen diferentes tamaños y niveles de rendimiento, desde unidades de estado sólido (SSD) a unidades de disco duro (HDD)</p>
+<h2 id="aspectos-basicos-de-azure-blob-storage">Aspectos básicos de Azure Blob Storage<a class="headerlink" href="#aspectos-basicos-de-azure-blob-storage" title="Permanent link">&para;</a></h2>
+<p>Azure Blob Storage es una solución de almacenamiento de objetos para la nube. Puede almacenar grandes cantidades de datos, como datos de texto o binarios. Azure Blob Storage es no estructurado.</p>
+<p>Los blobs no están limitados a formatos de archivo comunes. </p>
+<p>Blob Storage resulta ideal para lo siguiente:</p>
+<ul>
+<li>Visualización de imágenes o documentos directamente en un explorador.</li>
+<li>Almacenamiento de archivos para acceso distribuido.</li>
+<li>Streaming de audio y vídeo.</li>
+<li>Almacenamiento de datos para copia de seguridad y restauración, recuperación ante desastres y archivado.</li>
+<li>Almacenamiento de datos para el análisis en local o en un servicio hospedado de Azure.</li>
+<li>Almacenamiento de hasta 8 TB de datos para máquinas virtuales.</li>
+</ul>
+<p>Los blobs se almacenan en contenedores, lo que ayuda a organizar los blobs en función de sus necesidades empresariales.</p>
+<p>En el diagrama siguiente se muestra cómo puede usar las cuentas, los contenedores y los blobs de Azure.</p>
+<p><img alt="Diagrama de la jerarquía de una cuenta de almacenamiento" src="https://docs.microsoft.com/es-es/learn/azure-fundamentals/azure-storage-fundamentals/media/account-container-blob-4da0ac47.png" /></p>
+<h2 id="aspectos-basicos-de-azure-files">Aspectos básicos de Azure Files<a class="headerlink" href="#aspectos-basicos-de-azure-files" title="Permanent link">&para;</a></h2>
+<p>Azure Files ofrece recursos compartidos de archivos totalmente administrados en la nube a los que se puede acceder mediante los protocolos del Bloque de mensajes del servidor y Network File System (versión preliminar). Los recursos compartidos de Azure se pueden montar simultáneamente en implementaciones de Windows, Linux y macOS en la nube o locales. </p>
+<p>Use Azure Files para las siguientes situaciones:</p>
+<ul>
+<li>Muchas aplicaciones locales usan recursos compartidos de archivos. Azure Files facilita la migración de esas aplicaciones que comparten datos a Azure. Si monta el recurso compartido de archivos en la misma letra de unidad que usa la aplicación local, la parte de la aplicación que accede al recurso compartido de archivos debe funcionar con cambios mínimos, si los hay.</li>
+<li>Almacene archivos de configuración en un recurso compartido de archivos y acceda a ellos desde varias máquinas virtuales. Las herramientas y utilidades que usen varios desarrolladores de un grupo pueden almacenarse en un recurso compartido de archivos, lo que garantiza que todos los usuarios puedan encontrarlas y que utilizan la misma versión.</li>
+<li>Escriba datos en un recurso compartido de archivos y procese o analice los datos más adelante. Por ejemplo, puede que desee hacerlo con registros de diagnóstico, métricas y volcados de memoria.</li>
+</ul>
+<p>La siguiente ilustración muestra el uso de Azure Files para compartir datos entre dos ubicaciones geográficas. Azure Files garantiza que los datos se cifren en reposo, y el protocolo SMB garantiza que los datos se cifren en tránsito.</p>
+<p><img alt="Diagrama en el que se muestran las funcionalidades de uso compartido de archivos de Azure Files entre un recurso compartido de archivos de Azure de Oeste de EE. UU. y otro de Europa, cada uno con sus propios usuarios de SMB." src="https://docs.microsoft.com/es-es/learn/azure-fundamentals/azure-storage-fundamentals/media/azure-files-5f942c3e.png" /></p>
+<p>Una cosa que distingue Azure Files de los archivos ubicados en un recurso compartido de archivos corporativo es que puede tener acceso a los archivos desde cualquier lugar del mundo mediante una dirección URL que apunte al archivo. También puede usar tokens de Firma de acceso compartido (SAS) para permitir el acceso a un recurso privado durante un período de tiempo determinado.</p>
+<h2 id="descripcion-de-los-niveles-de-acceso-de-blobs">Descripción de los niveles de acceso de blobs<a class="headerlink" href="#descripcion-de-los-niveles-de-acceso-de-blobs" title="Permanent link">&para;</a></h2>
+<p>Azure proporciona varios <em>niveles de acceso</em>, que puede usar para equilibrar los costos de almacenamiento con sus necesidades de acceso.</p>
+<p>Entre los niveles de acceso disponibles se incluyen:</p>
+<ul>
+<li><strong>Nivel de acceso frecuente</strong>: optimizado para almacenar datos a los que se accede con frecuencia (por ejemplo, imágenes para el sitio web).</li>
+<li><strong>Nivel de acceso esporádico</strong>: optimizado para datos a los que se accede con poca frecuencia y que se almacenan al menos durante 30 días (por ejemplo, las facturas de los clientes).</li>
+<li><strong>Nivel de acceso de archivo</strong>: conveniente para datos a los que raramente se accede y que se almacenan durante al menos 180 días con requisitos de latencia flexibles (por ejemplo, copias de seguridad a largo plazo).</li>
+</ul>
+<p>Las siguientes consideraciones se aplican a los distintos niveles de acceso:</p>
+<ul>
+<li>Solo los niveles de acceso frecuente y esporádico se pueden establecer en el nivel de cuenta. El nivel de acceso de archivo no está disponible en el nivel de cuenta.</li>
+<li>Los niveles frecuente, esporádico y de archivo se pueden establecer en el nivel de blob durante la carga o después de esta.</li>
+<li>Los datos del nivel de acceso esporádico pueden tolerar una disponibilidad ligeramente inferior, pero aun así requieren una gran durabilidad, una latencia de recuperación y unas características de rendimiento similares a las de los datos de acceso frecuente. En el caso de los datos de acceso esporádico, un contrato de nivel de servicio (SLA) con una disponibilidad ligeramente inferior y unos costos de acceso mayores, en comparación con los datos de acceso frecuente, es aceptable a cambio de unos costos de almacenamiento menores.</li>
+<li>El almacenamiento de archivo almacena datos sin conexión y ofrece los menores costos de almacenamiento, pero los mayores costos de acceso y rehidratación de datos.</li>
+</ul>
+<h2 id="exploracion-de-azure-cosmos-db">Exploración de Azure Cosmos DB<a class="headerlink" href="#exploracion-de-azure-cosmos-db" title="Permanent link">&para;</a></h2>
+<p>Azure Cosmos DB es un servicio de base de datos de varios modelos distribuido globalmente. Puede escalar de forma elástica e independiente el rendimiento y el almacenamiento en cualquier número de regiones de Azure de todo el mundo. Puede aprovechar un acceso rápido y en milisegundos de un solo dígito a los datos mediante cualquiera de las diversas API populares. Azure Cosmos DB proporciona de forma exclusiva contratos de nivel de servicio completos para garantizar el rendimiento, la latencia, la disponibilidad y la coherencia.</p>
+<p>Azure Cosmos DB es compatible con los datos sin esquema, lo que le permite compilar aplicaciones "Always On" con una gran capacidad de respuesta para admitir datos en continuo cambio. Puede usar esta característica para almacenar datos actualizados y mantenidos por usuarios de todo el mundo.</p>
+<p><img alt="Diagrama de las bases de datos de Azure Cosmos DB en un sitio web del portal de aprendizaje." src="https://docs.microsoft.com/es-es/learn/azure-fundamentals/azure-database-fundamentals/media/azure-cosmos-db-1c115364.png" /></p>
+<p>Azure Cosmos DB es flexible. En el nivel más bajo, Azure Cosmos DB almacena los datos en formato de secuencia de registro de átomos (ARS). </p>
+<h2 id="exploracion-de-azure-sql-database">Exploración de Azure SQL Database<a class="headerlink" href="#exploracion-de-azure-sql-database" title="Permanent link">&para;</a></h2>
+<p>Azure SQL Database es una base de datos relacional basada en la última versión estable del motor de base de datos de Microsoft SQL Server.</p>
+<h3 id="caracteristicas">Características<a class="headerlink" href="#caracteristicas" title="Permanent link">&para;</a></h3>
+<p>Azure SQL Database es un motor de base de datos de plataforma como servicio (PaaS). SQL Database es un servicio totalmente administrado que ofrece alta disponibilidad, copias de seguridad y otras operaciones de mantenimiento comunes. Microsoft controla todas las actualizaciones del código del sistema operativo y SQL. No hace falta administrar la infraestructura subyacente. Puede crear una capa de almacenamiento de datos de gran rendimiento y disponibilidad para las aplicaciones y las soluciones de Azure.</p>
+<h3 id="migracion">Migración<a class="headerlink" href="#migracion" title="Permanent link">&para;</a></h3>
+<p>Puede migrar las bases de datos existentes de SQL Server con un tiempo de inactividad mínimo mediante Azure Database Migration Service. Microsoft Data Migration Assistant puede generar informes de evaluación que proporcionan recomendaciones para ayudarlo a través de los cambios necesarios anteriores a la ejecución de una migración. Después de evaluar y resolver cualquier corrección necesaria, está listo para comenzar el proceso de migración. Azure Database Migration Service realiza todos los pasos necesarios. El usuario solo tiene que cambiar la cadena de conexión en las aplicaciones.</p>
+<h2 id="exploracion-de-azure-database-for-mysql">Exploración de Azure Database for MySQL<a class="headerlink" href="#exploracion-de-azure-database-for-mysql" title="Permanent link">&para;</a></h2>
+<p>Azure Database for MySQL es un servicio de bases de datos relacionales en la nube, y se basa en el motor de base de datos de MySQL Community Edition. Disponibilidad del 99,99 % de Azure, con la tecnología de una red global de centros de recursos administrados por Microsoft</p>
+<p>Azure Database for MySQL ofrece lo siguiente:</p>
+<ul>
+<li>Alta disponibilidad integrada sin coste adicional.</li>
+<li>Rendimiento predecible y precios de pago por uso inclusivos.</li>
+<li>Escalado según sea necesario, en cuestión de segundos.</li>
+<li>Capacidad de protección de información confidencial en reposo y en movimiento.</li>
+<li>Copias de seguridad automáticas.</li>
+<li>Seguridad y cumplimiento de nivel empresarial.</li>
+</ul>
+<h2 id="exploracion-de-azure-database-for-postgresql">Exploración de Azure Database for PostgreSQL<a class="headerlink" href="#exploracion-de-azure-database-for-postgresql" title="Permanent link">&para;</a></h2>
+<p>Azure Database for PostgreSQL es un servicio de base de datos relacional en la nube. El software de servidor se basa en la versión de la comunidad del motor de base de datos de PostgreSQL de código abierto. Su familiaridad con las herramientas y la experiencia con PostgreSQL son aplicables cuando se use Azure Database for PostgreSQL.</p>
+<p>Además, Azure Database for PostgreSQL ofrece las siguientes ventajas:</p>
+<ul>
+<li>Alta disponibilidad integrada en comparación con los recursos locales. No hay ninguna configuración, replicación o costo adicionales que sean necesarios para asegurarse de que las aplicaciones están siempre disponibles.</li>
+<li>Precios sencillos y flexibles. Tiene un rendimiento predecible en función de un plan de tarifa seleccionado que incluye copias de seguridad automáticas, aplicación de revisiones de software, supervisión y seguridad.</li>
+<li>Escalado o reducción vertical según sea necesario, en cuestión de segundos. Puede escalar procesos o almacenamiento por separado según sea necesario para asegurarse de que adapta su servicio para que coincida con el uso.</li>
+<li>Copias de seguridad automáticas ajustables y restauración a un momento dado durante un máximo de 35 días.</li>
+<li>Seguridad y cumplimiento de nivel empresarial para proteger la información confidencial en reposo y en movimiento. Esta seguridad abarca el cifrado de datos en el disco y el cifrado SSL entre la comunicación entre cliente y servidor.</li>
+</ul>
+<p>Azure Database for PostgreSQL está disponible en dos opciones de implementación: <strong>Servidor único</strong> e <strong>Hiperescala (Citus)</strong>.</p>
+<h3 id="servidor-unico">Servidor único<a class="headerlink" href="#servidor-unico" title="Permanent link">&para;</a></h3>
+<p>La opción de implementación Un solo servidor ofrece:</p>
+<ul>
+<li>Alta disponibilidad integrada sin coste adicional (contrato de nivel de servicio del 99,99 %).</li>
+<li>Rendimiento predecible y precios de pago por uso inclusivos.</li>
+<li>Escalado vertical según sea necesario, en cuestión de segundos.</li>
+<li>Supervisión y alertas para evaluar el servidor.</li>
+<li>Seguridad y cumplimiento de nivel empresarial.</li>
+<li>Capacidad de protección de información confidencial en reposo y en movimiento.</li>
+<li>Copias de seguridad automáticas y restauración a un momento dado durante un máximo de 35 días.</li>
+</ul>
+<h3 id="hiperescala-citus">Hiperescala (Citus)<a class="headerlink" href="#hiperescala-citus" title="Permanent link">&para;</a></h3>
+<p>La opción de Hiperescala (Citus) escala horizontalmente las consultas entre varias máquinas mediante el particionamiento. Su motor de consultas paraleliza las consultas SQL entrantes en estos servidores para agilizar las respuestas en conjuntos de datos grandes. Proporciona servicios a las aplicaciones que requieren mayor escala y mejor rendimiento, por lo general las cargas de trabajo que se aproximan a los 100 GB de datos (o que ya los superan).</p>
+<h2 id="exploracion-de-azure-sql-managed-instance">Exploración de Azure SQL Managed Instance<a class="headerlink" href="#exploracion-de-azure-sql-managed-instance" title="Permanent link">&para;</a></h2>
+<p>Azure SQL Managed Instance es un servicio de datos en la nube escalable que proporciona la mayor compatibilidad con el motor de base de datos de SQL Server con todas las ventajas de una plataforma como servicio totalmente administrada. En función de su escenario, Azure SQL Managed Instance podría ofrecer más opciones para sus necesidades de base de datos.</p>
+<h3 id="caracteristicas_1">Características<a class="headerlink" href="#caracteristicas_1" title="Permanent link">&para;</a></h3>
+<p>Azure SQL Managed Instance es un motor de base de datos de plataforma como servicio (PaaS). Aprovisionamiento rápido y escalado de servicio de Azure, junto con la aplicación automatizada de revisiones y las actualizaciones de versiones. Además, podrá estar seguro de que los datos siempre estarán allí cuando los necesite a través de características de alta disponibilidad integradas y un acuerdo de nivel de servicio (SLA) del 99,99 % de tiempo de actividad. También podrá proteger los datos con copias de seguridad automatizadas y un período de retención de copias de seguridad configurable</p>
+<h3 id="migracion_1">Migración<a class="headerlink" href="#migracion_1" title="Permanent link">&para;</a></h3>
+<p>Azure SQL Managed Instance facilita la migración de los datos locales en SQL Server a la nube con Azure Database Migration Service (DMS) o copias de seguridad y restauración nativas</p>
+<p><img alt="Flujo de proceso para la migración de datos a Azure SQL Managed Instance." src="https://docs.microsoft.com/es-es/learn/azure-fundamentals/azure-database-fundamentals/media/migration-process-flow-small-a899c59c.png" /></p>
+<h2 id="exploracion-de-analisis-y-macrodatos">Exploración de análisis y macrodatos<a class="headerlink" href="#exploracion-de-analisis-y-macrodatos" title="Permanent link">&para;</a></h2>
+<p>La forma y el formato de los datos son muy variados. Cuando hablamos sobre macrodatos, nos referimos a grandes volúmenes de datos. En este escenario de Tailwind Traders, los datos se recopilan de los sensores GPS, que incluyen información de ubicación, datos de los sistemas del tiempo y muchos otros orígenes que generan grandes cantidades de datos. Con tal cantidad de datos, es cada vez más difícil comprenderlos y tomar decisiones basándose en ellos. Estos volúmenes son tan grandes que las formas de procesamiento y análisis tradicionales ya no son adecuadas.</p>
+<p><strong>Azure Synapse Analytics</strong></p>
+<p><a href="https://docs.microsoft.com/es-es/azure/sql-data-warehouse/">Azure Synapse Analytics</a> (anteriormente Azure SQL Data Warehouse) es un servicio de análisis ilimitado que reúne el almacenamiento de datos empresariales y el análisis de macrodatos. Puede consultar los datos como prefiera mediante recursos sin servidor o aprovisionados a escala. Tiene una experiencia unificada para ingerir, preparar, administrar y servir datos para las necesidades inmediatas de inteligencia empresarial y aprendizaje automático.</p>
+<p><strong>Azure HDInsight</strong></p>
+<p><a href="https://azure.microsoft.com/services/hdinsight/">Azure HDInsight</a> es un servicio de análisis de código abierto totalmente administrado para empresas. Es un servicio en la nube que hace que sea más fácil, rápido y rentable procesar grandes cantidades de datos. Puede ejecutar marcos de código abierto populares y crear tipos de clúster, como <a href="https://docs.microsoft.com/es-es/azure/hdinsight/spark/apache-spark-overview">Apache Spark</a>, <a href="https://docs.microsoft.com/es-es/azure/hdinsight/hadoop/apache-hadoop-introduction">Apache Hadoop</a>, <a href="https://docs.microsoft.com/es-es/azure/hdinsight/kafka/apache-kafka-introduction">Apache Kafka</a>, <a href="https://docs.microsoft.com/es-es/azure/hdinsight/hbase/apache-hbase-overview">Apache HBase</a>, <a href="https://docs.microsoft.com/es-es/azure/hdinsight/storm/apache-storm-overview">Apache Storm</a> y <a href="https://docs.microsoft.com/es-es/azure/hdinsight/r-server/r-server-overview">Machine Learning Services</a>. HDInsight también admite una amplia gama de escenarios, como la extracción, la transformación y la carga de datos (ETL), el almacenamiento de datos, el aprendizaje automático e IoT.</p>
+<p><strong>Azure Databricks</strong></p>
+<p><a href="https://azure.microsoft.com/services/databricks/">Azure Databricks</a> le ayuda a descubrir información de todos los datos y a crear soluciones de inteligencia artificial. Puede configurar el entorno de Apache Spark en minutos y, después, escalar automáticamente y colaborar en proyectos compartidos en un área de trabajo interactiva. Azure Databricks admite Python, Scala, R, Java y SQL, así como marcos y bibliotecas de ciencia de datos, como TensorFlow, PyTorch y Scikit-learn.</p>
+<p><strong>Análisis con Azure Data Lake</strong></p>
+<p><a href="https://azure.microsoft.com/services/data-lake-analytics/">Azure Data Lake Analytics</a> es un servicio de trabajos de análisis a petición que simplifica los macrodatos. En lugar de implementar, configurar y ajustar el hardware, escribirá consultas para transformar los datos y extraer ideas valiosas. El servicio de análisis puede administrar trabajos de cualquier escala al instante, simplemente estableciendo el ajuste adecuado. Solo paga por su trabajo cuando se está ejecutando, lo que hace que sea más rentable.</p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Pie" >
+      
+        
+        <a href="../modulo-1/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Modulo 1" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              Modulo 1
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../modulo-3/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Modulo 3" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              Modulo 3
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b028fd86.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.7f366e99.min.js"></script>
+      
+    
+  </body>
+</html>

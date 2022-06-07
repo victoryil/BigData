@@ -1,0 +1,2140 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.2">
+    
+    
+      
+        <title>Modulo 1 - Victor - Big Data</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.5d38496d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#azure-modulo-1" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Victor - Big Data" class="md-header__button md-logo" aria-label="Victor - Big Data" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Victor - Big Data
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Modulo 1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Victor - Big Data" class="md-nav__button md-logo" aria-label="Victor - Big Data" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Victor - Big Data
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro/" class="md-nav__link">
+        Introduccion a Big Data
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Apache
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Apache" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Apache
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apache/hadoop/intro/" class="md-nav__link">
+        Hadoop
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apache/hbase/intro/" class="md-nav__link">
+        HBase
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apache/hive/intro/" class="md-nav__link">
+        Hive
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apache/kafka/intro/" class="md-nav__link">
+        Kafka
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_5">
+          Spark
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Spark" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Spark
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apache/spark/intro/" class="md-nav__link">
+        Introduccion
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apache/spark/SparkSQL/" class="md-nav__link">
+        Spark SQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apache/spark/SparkStreaming/" class="md-nav__link">
+        Spark Streaming
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apache/spark/TuningSpark/" class="md-nav__link">
+        Tuning Spark
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Azure
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Azure" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Azure
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
+        Introduccion Cloud
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Modulo 1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Modulo 1
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    Introducción
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#por-que-suele-ser-mas-barato-usar-la-informatica-en-la-nube" class="md-nav__link">
+    ¿Por qué suele ser más barato usar la informática en la nube?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#por-que-deberia-migrar-a-la-nube" class="md-nav__link">
+    ¿Por qué debería migrar a la nube?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-azure" class="md-nav__link">
+    ¿Qué es Azure?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-ofrece-azure" class="md-nav__link">
+    ¿Qué ofrece Azure?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-funciona-azure" class="md-nav__link">
+    ¿Cómo funciona Azure?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-azure-portal" class="md-nav__link">
+    ¿Qué es Azure Portal?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-azure-marketplace" class="md-nav__link">
+    ¿Qué es Azure Marketplace?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servicios-de-azure" class="md-nav__link">
+    Servicios de Azure
+  </a>
+  
+    <nav class="md-nav" aria-label="Servicios de Azure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proceso" class="md-nav__link">
+    Proceso
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redes" class="md-nav__link">
+    Redes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#almacenamiento" class="md-nav__link">
+    Almacenamiento
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#movil" class="md-nav__link">
+    Móvil
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bases-de-datos" class="md-nav__link">
+    Bases de datos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    Web
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iot" class="md-nav__link">
+    IoT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macrodatos" class="md-nav__link">
+    Macrodatos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inteligencia-artificial" class="md-nav__link">
+    Inteligencia  Artificial
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#devops" class="md-nav__link">
+    DevOps
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion-a-las-cuentas-de-azure" class="md-nav__link">
+    Introducción a las cuentas de Azure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regiones-de-azure" class="md-nav__link">
+    Regiones de Azure
+  </a>
+  
+    <nav class="md-nav" aria-label="Regiones de Azure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#por-que-son-importantes-las-regiones" class="md-nav__link">
+    ¿Por qué son importantes las regiones?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regiones-de-azure-especiales" class="md-nav__link">
+    Regiones de Azure especiales
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zonas-de-disponibilidad-de-azure" class="md-nav__link">
+    Zonas de disponibilidad de Azure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pares-de-regiones-de-azure" class="md-nav__link">
+    Pares de regiones de Azure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grupos-de-recursos-de-azure" class="md-nav__link">
+    Grupos de recursos de Azure
+  </a>
+  
+    <nav class="md-nav" aria-label="Grupos de recursos de Azure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agrupacion-logica" class="md-nav__link">
+    Agrupación lógica
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ciclo-de-vida" class="md-nav__link">
+    Ciclo de vida
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autorizacion" class="md-nav__link">
+    Autorización
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azure-resource-manager" class="md-nav__link">
+    Azure Resource Manager
+  </a>
+  
+    <nav class="md-nav" aria-label="Azure Resource Manager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ventajas-de-usar-administrador-de-recursos" class="md-nav__link">
+    Ventajas de usar Administrador de recursos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suscripciones-de-azure" class="md-nav__link">
+    Suscripciones de Azure
+  </a>
+  
+    <nav class="md-nav" aria-label="Suscripciones de Azure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-una-suscripcion-de-azure-adicional" class="md-nav__link">
+    Creación de una suscripción de Azure adicional
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#personalizacion-de-la-facturacion-para-satisfacer-sus-necesidades" class="md-nav__link">
+    Personalización de la facturación para satisfacer sus necesidades
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grupos-de-administracion-de-azure" class="md-nav__link">
+    Grupos de administración de Azure
+  </a>
+  
+    <nav class="md-nav" aria-label="Grupos de administración de Azure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jerarquia-de-los-grupos-de-administracion-y-las-suscripciones" class="md-nav__link">
+    Jerarquía de los grupos de administración y las suscripciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hechos-importantes-acerca-de-los-grupos-de-administracion" class="md-nav__link">
+    Hechos importantes acerca de los grupos de administración
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terminologia-y-conceptos-de-azure" class="md-nav__link">
+    Terminología y conceptos de Azure
+  </a>
+  
+    <nav class="md-nav" aria-label="Terminología y conceptos de Azure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-app-service" class="md-nav__link">
+    ¿Qué es App Service?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-es-azure-marketplace_1" class="md-nav__link">
+    ¿Qué es Azure Marketplace?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulo-2/" class="md-nav__link">
+        Modulo 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulo-3/" class="md-nav__link">
+        Modulo 3
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Motores
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Motores" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Motores
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_1">
+          Impala
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Impala" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Impala
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../motores/impala/intro/" class="md-nav__link">
+        Introduccion
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Plataformas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Plataformas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Plataformas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_1">
+          Airflow
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Airflow" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_1">
+          <span class="md-nav__icon md-icon"></span>
+          Airflow
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plataforma/airflow/intro/" class="md-nav__link">
+        Introduccion
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" type="checkbox" id="__nav_6_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_2">
+          Databricks
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Databricks" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_2">
+          <span class="md-nav__icon md-icon"></span>
+          Databricks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plataforma/databricks/intro/" class="md-nav__link">
+        Introduccion
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3" type="checkbox" id="__nav_6_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_3">
+          Snowflake
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Snowflake" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_3">
+          <span class="md-nav__icon md-icon"></span>
+          Snowflake
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plataforma/snowflake/intro/" class="md-nav__link">
+        Introduccion
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Lenguajes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lenguajes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Lenguajes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1" type="checkbox" id="__nav_7_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_1">
+          Scala
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Scala" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          Scala
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang/scala/intro/" class="md-nav__link">
+        Introduccion
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    Introducción
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#por-que-suele-ser-mas-barato-usar-la-informatica-en-la-nube" class="md-nav__link">
+    ¿Por qué suele ser más barato usar la informática en la nube?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#por-que-deberia-migrar-a-la-nube" class="md-nav__link">
+    ¿Por qué debería migrar a la nube?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-azure" class="md-nav__link">
+    ¿Qué es Azure?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-ofrece-azure" class="md-nav__link">
+    ¿Qué ofrece Azure?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-funciona-azure" class="md-nav__link">
+    ¿Cómo funciona Azure?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-azure-portal" class="md-nav__link">
+    ¿Qué es Azure Portal?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-azure-marketplace" class="md-nav__link">
+    ¿Qué es Azure Marketplace?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servicios-de-azure" class="md-nav__link">
+    Servicios de Azure
+  </a>
+  
+    <nav class="md-nav" aria-label="Servicios de Azure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proceso" class="md-nav__link">
+    Proceso
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redes" class="md-nav__link">
+    Redes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#almacenamiento" class="md-nav__link">
+    Almacenamiento
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#movil" class="md-nav__link">
+    Móvil
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bases-de-datos" class="md-nav__link">
+    Bases de datos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    Web
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iot" class="md-nav__link">
+    IoT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macrodatos" class="md-nav__link">
+    Macrodatos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inteligencia-artificial" class="md-nav__link">
+    Inteligencia  Artificial
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#devops" class="md-nav__link">
+    DevOps
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion-a-las-cuentas-de-azure" class="md-nav__link">
+    Introducción a las cuentas de Azure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regiones-de-azure" class="md-nav__link">
+    Regiones de Azure
+  </a>
+  
+    <nav class="md-nav" aria-label="Regiones de Azure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#por-que-son-importantes-las-regiones" class="md-nav__link">
+    ¿Por qué son importantes las regiones?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regiones-de-azure-especiales" class="md-nav__link">
+    Regiones de Azure especiales
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zonas-de-disponibilidad-de-azure" class="md-nav__link">
+    Zonas de disponibilidad de Azure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pares-de-regiones-de-azure" class="md-nav__link">
+    Pares de regiones de Azure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grupos-de-recursos-de-azure" class="md-nav__link">
+    Grupos de recursos de Azure
+  </a>
+  
+    <nav class="md-nav" aria-label="Grupos de recursos de Azure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agrupacion-logica" class="md-nav__link">
+    Agrupación lógica
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ciclo-de-vida" class="md-nav__link">
+    Ciclo de vida
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autorizacion" class="md-nav__link">
+    Autorización
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azure-resource-manager" class="md-nav__link">
+    Azure Resource Manager
+  </a>
+  
+    <nav class="md-nav" aria-label="Azure Resource Manager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ventajas-de-usar-administrador-de-recursos" class="md-nav__link">
+    Ventajas de usar Administrador de recursos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suscripciones-de-azure" class="md-nav__link">
+    Suscripciones de Azure
+  </a>
+  
+    <nav class="md-nav" aria-label="Suscripciones de Azure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-una-suscripcion-de-azure-adicional" class="md-nav__link">
+    Creación de una suscripción de Azure adicional
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#personalizacion-de-la-facturacion-para-satisfacer-sus-necesidades" class="md-nav__link">
+    Personalización de la facturación para satisfacer sus necesidades
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grupos-de-administracion-de-azure" class="md-nav__link">
+    Grupos de administración de Azure
+  </a>
+  
+    <nav class="md-nav" aria-label="Grupos de administración de Azure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jerarquia-de-los-grupos-de-administracion-y-las-suscripciones" class="md-nav__link">
+    Jerarquía de los grupos de administración y las suscripciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hechos-importantes-acerca-de-los-grupos-de-administracion" class="md-nav__link">
+    Hechos importantes acerca de los grupos de administración
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terminologia-y-conceptos-de-azure" class="md-nav__link">
+    Terminología y conceptos de Azure
+  </a>
+  
+    <nav class="md-nav" aria-label="Terminología y conceptos de Azure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-app-service" class="md-nav__link">
+    ¿Qué es App Service?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-es-azure-marketplace_1" class="md-nav__link">
+    ¿Qué es Azure Marketplace?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="azure-modulo-1">Azure modulo 1<a class="headerlink" href="#azure-modulo-1" title="Permanent link">&para;</a></h1>
+<h2 id="introduccion">Introducción<a class="headerlink" href="#introduccion" title="Permanent link">&para;</a></h2>
+<p>Azure es una plataforma de informática en la nube con un conjunto de servicios que se amplía continuamente para ayudarle a crear soluciones que satisfagan los objetivos empresariales. </p>
+<h2 id="por-que-suele-ser-mas-barato-usar-la-informatica-en-la-nube">¿Por qué suele ser más barato usar la informática en la nube?<a class="headerlink" href="#por-que-suele-ser-mas-barato-usar-la-informatica-en-la-nube" title="Permanent link">&para;</a></h2>
+<p>Modelo de precios de pago por uso. Normalmente solo se paga por los servicios en la nube que se usan, lo que permite:</p>
+<ul>
+<li>Reducir los costos operativos.</li>
+<li>Ejecutar la infraestructura de forma más eficaz.</li>
+<li>Escalar a medida que cambien las necesidades empresariales.</li>
+</ul>
+<h2 id="por-que-deberia-migrar-a-la-nube">¿Por qué debería migrar a la nube?<a class="headerlink" href="#por-que-deberia-migrar-a-la-nube" title="Permanent link">&para;</a></h2>
+<p>La nube ayuda a moverse con más rapidez, los equipos proporcionan nuevas características a los usuarios a velocidades récord. La nube proporciona acceso a petición para:</p>
+<ul>
+<li>Un grupo casi ilimitado de componentes de proceso, almacenamiento y redes sin procesar.</li>
+<li>Reconocimiento de voz y otros servicios cognitivos que ayudan a hacer que su aplicación destaque entre la multitud.</li>
+<li>Servicios de análisis que proporcionan datos de telemetría desde el software y los dispositivos.</li>
+</ul>
+<h2 id="que-es-azure">¿Qué es Azure?<a class="headerlink" href="#que-es-azure" title="Permanent link">&para;</a></h2>
+<p>Es un conjunto de servicios en la nube, donde puedes hacer todas las gestiones desde el <strong>portal de</strong> <strong>Azure</strong>, donde podrás crear, configurar y controlar todos los recursos y servicios desde una sencilla y única Web App</p>
+<h2 id="que-ofrece-azure">¿Qué ofrece Azure?<a class="headerlink" href="#que-ofrece-azure" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Innovación continua</li>
+<li>Mantiene un compromiso con el código abierto y admite todos los lenguajes y marcos, puede compilar como quiera e implementar donde quiera.</li>
+<li>Entorno híbrido</li>
+<li>Seguridad respaldada por un equipo de expertos.</li>
+</ul>
+<h2 id="como-funciona-azure">¿Cómo funciona Azure?<a class="headerlink" href="#como-funciona-azure" title="Permanent link">&para;</a></h2>
+<p>Azure es una plataforma en cloud privada y publica que ayuda a los desarrolladores y los administradores de IT a construir, desplegar y administrar sus aplicaciones. Azure usa la virtualización separando entre un acoplamiento ajustado entre el hardware y el sistema operativo usando una capa de abstracción llamada <strong><em>hypervisor</em></strong>.</p>
+<p>El hypervisor emula todas las funciones de un ordenador real y su CPU en una maquina virtual, optimiza la capacidad de la obstrucción por hardware. Este puede correr múltiples maquinas virtuales a la vez y cada una puede correr cualquier sistema operativo compatible.</p>
+<p>Microsoft tiene centros de datos por todo el mundo, cada centro de datos tiene racks lleno de servidores y cada servidor incluye <strong>Hypervisor</strong> para correr las multiples maquinas virtuales, un Switch de red que provee la conectividad para todos los servidores. Se ejecuta un servidor en cada rack con un software especial llamado <strong>Frabric Controller</strong>.</p>
+<p>Cada Fabric Controller esta conectado a otra pieza especial de software conocida como <strong>Orchestator</strong>, este es el responsable de administrar todo lo que pasa en Azure, incluyendo las peticiones del usuario. El usuario hace las peticiones usando la web API de Orchestator, la cual puede ser llamada por varias herramientas incluida la interfaz de Azure Portal.</p>
+<p>Cuando un usuario hace una peticion para crear una maquina virtual, Orchestator empaqueta todo lo necesario, elige el mejor servidor rack, y manda esos paquetes y peticion al Fabric Controller. Una vez que el Fabric Controller crea la maquina, el usuario puede conectar con ella.</p>
+<h2 id="que-es-azure-portal">¿Qué es Azure Portal?<a class="headerlink" href="#que-es-azure-portal" title="Permanent link">&para;</a></h2>
+<p>Es una consola unificada basada en web que proporciona una alternativa a las herramientas de línea de comandos. Con Azure Portal, puede administrar la suscripción de Azure mediante una interfaz gráfica de usuario. Puede:</p>
+<ul>
+<li>Compile, administre y supervise todo, desde aplicaciones web sencillas hasta complejas implementaciones en la nube.</li>
+<li>Cree paneles personalizados para una vista organizada de recursos.</li>
+<li>Configure opciones de accesibilidad para una experiencia óptima.</li>
+</ul>
+<p><img alt="Captura de pantalla en la que se muestra Azure Portal." src="https://docs.microsoft.com/es-es/learn/azure-fundamentals/intro-to-azure-fundamentals/media/azure-portal-dd184579.png" /></p>
+<h2 id="que-es-azure-marketplace">¿Qué es Azure Marketplace?<a class="headerlink" href="#que-es-azure-marketplace" title="Permanent link">&para;</a></h2>
+<p>Facilita la conexión entre los usuarios y los partners de Microsoft, proveedores de software independientes y nuevas empresas que ofrecen sus soluciones y servicios, optimizados para ejecutarse en Azure. Los clientes de Azure Marketplace pueden buscar, probar, comprar y aprovisionar aplicaciones y servicios de cientos de los principales proveedores de servicios. Todas las soluciones y los servicios están certificados para ejecutarse en Azure.</p>
+<p><img alt="Captura de pantalla en la que se muestra Azure Marketplace." src="https://docs.microsoft.com/es-es/learn/azure-fundamentals/intro-to-azure-fundamentals/media/marketplace-6ca0b9bb.png" /></p>
+<h2 id="servicios-de-azure">Servicios de Azure<a class="headerlink" href="#servicios-de-azure" title="Permanent link">&para;</a></h2>
+<p><img alt="Diagrama en el que se muestra la vista general de los servicios de Azure populares con secciones para seguridad y administración, servicios de plataforma, nube híbrida y servicios de infraestructura." src="https://docs.microsoft.com/es-es/learn/azure-fundamentals/intro-to-azure-fundamentals/media/azure-services-6c41a736.png" /></p>
+<h3 id="proceso">Proceso<a class="headerlink" href="#proceso" title="Permanent link">&para;</a></h3>
+<p>Azure proporciona una amplia gama de opciones para hospedar aplicaciones y servicios.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Nombre del servicio</th>
+<th align="center">Función del servicio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Azure Virtual Machines</td>
+<td align="center">Máquinas virtuales (VM) Windows o Linux hospedadas en Azure.</td>
+</tr>
+<tr>
+<td align="center">Azure Virtual Machine Scale Sets</td>
+<td align="center">Escalado de máquinas virtuales Windows o Linux hospedadas en Azure.</td>
+</tr>
+<tr>
+<td align="center">Azure Kubernetes Service</td>
+<td align="center">Administración de clústeres para máquinas virtuales que ejecutan servicios en contenedores.</td>
+</tr>
+<tr>
+<td align="center">Azure Service Fabric</td>
+<td align="center">Plataforma de sistemas distribuidos que se ejecuta en Azure o en el entorno local.</td>
+</tr>
+<tr>
+<td align="center">Azure Batch</td>
+<td align="center">Servicio administrado para aplicaciones informáticas de alto rendimiento y paralelas.</td>
+</tr>
+<tr>
+<td align="center">Azure Container Instances</td>
+<td align="center">Aplicaciones en contenedores que se ejecutan en Azure sin necesidad de aprovisionar servidores ni máquinas virtuales.</td>
+</tr>
+<tr>
+<td align="center">Azure Functions</td>
+<td align="center">Un servicio de procesos sin servidor y controlado por eventos</td>
+</tr>
+</tbody>
+</table>
+<h3 id="redes">Redes<a class="headerlink" href="#redes" title="Permanent link">&para;</a></h3>
+<p>La vinculación de recursos de proceso y el suministro de acceso a las aplicaciones es la función clave de la red de Azure.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>Nombre del servicio</strong></th>
+<th align="center"><strong>Función del servicio</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Azure Virtual Network</td>
+<td align="center">Conecta máquinas virtuales a conexiones de red privada virtual (VPN) entrantes.</td>
+</tr>
+<tr>
+<td align="center">Azure Load Balancer</td>
+<td align="center">Equilibra las conexiones entrantes y salientes a aplicaciones o puntos de conexión de servicio.</td>
+</tr>
+<tr>
+<td align="center">Azure Application Gateway</td>
+<td align="center">Optimiza la entrega de granjas de servidores de aplicaciones y, al mismo tiempo, aumenta la seguridad de las aplicaciones.</td>
+</tr>
+<tr>
+<td align="center">Azure VPN Gateway</td>
+<td align="center">Accede a redes de Azure Virtual Network mediante puertas de enlace de VPN de alto rendimiento.</td>
+</tr>
+<tr>
+<td align="center">Azure DNS</td>
+<td align="center">Proporciona respuestas DNS ultrarrápidas y disponibilidad de dominio extremadamente alta.</td>
+</tr>
+<tr>
+<td align="center">Azure Content Delivery Network</td>
+<td align="center">Entrega contenido de gran ancho de banda a los clientes globalmente.</td>
+</tr>
+<tr>
+<td align="center">Azure DDoS Protection</td>
+<td align="center">Protege las aplicaciones hospedadas en Azure frente a ataques por denegación de servicio distribuido (DDoS).</td>
+</tr>
+<tr>
+<td align="center">Azure Traffic Manager</td>
+<td align="center">Distribuye el tráfico de red entre las regiones de Azure en todo el mundo.</td>
+</tr>
+<tr>
+<td align="center">Azure ExpressRoute</td>
+<td align="center">Se conecta a Azure mediante conexiones seguras de gran ancho de banda dedicadas.</td>
+</tr>
+<tr>
+<td align="center">Azure Network Watcher</td>
+<td align="center">Supervisa y diagnostica problemas de red mediante el análisis basado en el escenario.</td>
+</tr>
+<tr>
+<td align="center">Azure Firewall</td>
+<td align="center">Implementa un firewall de alta seguridad y alta disponibilidad con escalabilidad ilimitada.</td>
+</tr>
+<tr>
+<td align="center">Azure Virtual WAN</td>
+<td align="center">Crea una red de área extensa (WAN) unificada que conecta sitios locales y remotos.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="almacenamiento">Almacenamiento<a class="headerlink" href="#almacenamiento" title="Permanent link">&para;</a></h3>
+<p>Azure proporciona cuatro tipos principales de servicios de almacenamiento.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>Nombre del servicio</strong></th>
+<th align="center"><strong>Función del servicio</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Azure Blob Storage</td>
+<td align="center">Servicio de almacenamiento para objetos muy grandes, como archivos de vídeo o mapas de bits.</td>
+</tr>
+<tr>
+<td align="center">Azure File storage</td>
+<td align="center">Recursos compartidos de archivos que puede administrar como un servidor de archivos y acceder a ellos del mismo modo.</td>
+</tr>
+<tr>
+<td align="center">Azure Queue Storage</td>
+<td align="center">Almacén de datos para la puesta en cola y la entrega confiable de mensajes entre aplicaciones.</td>
+</tr>
+<tr>
+<td align="center">Azure Table storage</td>
+<td align="center">Table Storage es un servicio que almacena datos estructurados no relacionales (también conocidos como datos NoSQL estructurados) en la nube, lo que proporciona un almacén de claves y atributos con un diseño sin esquema.</td>
+</tr>
+</tbody>
+</table>
+<p>Todos estos servicios comparten varias características:</p>
+<ul>
+<li><strong>Durabilidad</strong> y alta disponibilidad con redundancia y la replicación.</li>
+<li><strong>Seguridad</strong> mediante el cifrado automático y control de acceso basado en rol.</li>
+<li><strong>Escalabilidad</strong> con un almacenamiento prácticamente ilimitado.</li>
+<li><strong>Administración</strong> y control del mantenimiento y de cualquier problema crítico que pueda surgir.</li>
+<li><strong>Accesibilidad</strong> desde cualquier parte del mundo a través de HTTP o HTTPS.</li>
+</ul>
+<h3 id="movil">Móvil<a class="headerlink" href="#movil" title="Permanent link">&para;</a></h3>
+<p>Los desarrolladores pueden crear servicios de back-end móviles para aplicaciones iOS, Android y Windows de forma rápida y sencilla. </p>
+<p>Estas son las características de este servicio:</p>
+<ul>
+<li>Sincronización de datos sin conexión.</li>
+<li>Conectividad a datos locales.</li>
+<li>Difusión de notificaciones de inserción.</li>
+<li>Escalado automático para satisfacer las necesidades del negocio.</li>
+</ul>
+<h3 id="bases-de-datos">Bases de datos<a class="headerlink" href="#bases-de-datos" title="Permanent link">&para;</a></h3>
+<p>Azure proporciona varios servicios de base de datos para almacenar una gran variedad de volúmenes y tipos de datos. Y con la conectividad global, los usuarios disponen de estos datos al instante.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Nombre del servicio</strong></th>
+<th><strong>Función del servicio</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Azure Cosmos DB</td>
+<td>Base de datos distribuida globalmente que admite opciones NoSQL.</td>
+</tr>
+<tr>
+<td>Azure SQL Database</td>
+<td>Base de datos relacional totalmente administrada con escalado automático, inteligencia integral y seguridad sólida.</td>
+</tr>
+<tr>
+<td>Azure Database for MySQL</td>
+<td>Base de datos relacional MySQL totalmente administrada y escalable con alta disponibilidad y seguridad.</td>
+</tr>
+<tr>
+<td>Azure Database for PostgreSQL</td>
+<td>Base de datos relacional PostgreSQL totalmente administrada y escalable con alta disponibilidad y seguridad.</td>
+</tr>
+<tr>
+<td>SQL Server en Azure Virtual Machines</td>
+<td>Servicio que hospeda aplicaciones empresariales de SQL Server en la nube.</td>
+</tr>
+<tr>
+<td>Azure Synapse Analytics</td>
+<td>Almacén de datos totalmente administrado con seguridad integral en todos los niveles de escala sin costo adicional.</td>
+</tr>
+<tr>
+<td>Azure Database Migration Service</td>
+<td>Servicio que migra bases de datos a la nube sin cambios en el código de aplicación.</td>
+</tr>
+<tr>
+<td>Azure Cache for Redis</td>
+<td>Servicio totalmente administrado que almacena en caché datos estáticos y usados con frecuencia para reducir la latencia de datos y aplicaciones.</td>
+</tr>
+<tr>
+<td>Azure Database for MariaDB</td>
+<td>Base de datos relacional MariaDB totalmente administrada y escalable con alta disponibilidad y seguridad.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="web">Web<a class="headerlink" href="#web" title="Permanent link">&para;</a></h3>
+<p>Azure incluye soporte técnico de primera clase para compilar y hospedar aplicaciones web y servicios web basados en HTTP.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>Nombre del servicio</strong></th>
+<th align="center"><strong>Descripción</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Azure App Service</td>
+<td align="center">Creación rápida de aplicaciones en la nube eficaces basadas en web.</td>
+</tr>
+<tr>
+<td align="center">Azure Notification Hubs</td>
+<td align="center">Envíe notificaciones push a cualquier plataforma desde cualquier back-end.</td>
+</tr>
+<tr>
+<td align="center">Azure API Management</td>
+<td align="center">Publique API para desarrolladores, asociados y empleados de forma segura y a escala.</td>
+</tr>
+<tr>
+<td align="center">Azure Cognitive Search</td>
+<td align="center">Esta búsqueda completamente administrada se implementa como servicio.</td>
+</tr>
+<tr>
+<td align="center">Característica Web Apps de Azure App Service</td>
+<td align="center">Cree e implemente rápidamente aplicaciones web críticas a escala.</td>
+</tr>
+<tr>
+<td align="center">Servicio Azure SignalR</td>
+<td align="center">Agregue funcionalidades web en tiempo real con facilidad.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="iot">IoT<a class="headerlink" href="#iot" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>Nombre del servicio</strong></th>
+<th align="center"><strong>Descripción</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">IoT Central</td>
+<td align="center">Solución global de software como servicio (SaaS) de IoT totalmente administrada que facilita la conexión, la supervisión y la administración de los recursos de IoT a escala.</td>
+</tr>
+<tr>
+<td align="center">Azure IoT Hub</td>
+<td align="center">Centro de mensajería que proporciona comunicaciones y supervisión seguras entre millones de dispositivos de IoT.</td>
+</tr>
+<tr>
+<td align="center">IoT Edge</td>
+<td align="center">Servicio totalmente administrado que permite insertar los modelos de análisis de datos directamente en los dispositivos IoT, lo que les permite responder rápidamente a los cambios de estado sin necesidad de consultar modelos de IA basados en la nube.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="macrodatos">Macrodatos<a class="headerlink" href="#macrodatos" title="Permanent link">&para;</a></h3>
+<p>Se han desarrollado tecnologías de clúster de código abierto para tratar con estos grandes conjuntos de datos. Azure admite una amplia gama de tecnologías y servicios para proporcionar soluciones de análisis y macrodatos.</p>
+<h3 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>Nombre del servicio</strong></th>
+<th align="center"><strong>Descripción</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Azure Synapse Analytics</td>
+<td align="center">Ejecute análisis a gran escala mediante un almacenamiento de datos empresarial basado en la nube que aprovecha las ventajas del procesamiento paralelo masivo para ejecutar rápidamente consultas complejas en petabytes de datos.</td>
+</tr>
+<tr>
+<td align="center">HDInsight de Azure</td>
+<td align="center">Procese grandes cantidades de datos con los clústeres administrados de Hadoop en la nube.</td>
+</tr>
+<tr>
+<td align="center">Azure Databricks</td>
+<td align="center">Integre este servicio de análisis colaborativo basado en Apache Spark con otros servicios de macrodatos en Azure.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="inteligencia-artificial">Inteligencia  Artificial<a class="headerlink" href="#inteligencia-artificial" title="Permanent link">&para;</a></h3>
+<p>En el contexto de la informática en la nube, la inteligencia artificial se basa en una amplia gama de servicios, donde el principal es el aprendizaje automático.</p>
+<p>Estos son algunos de los tipos de servicios de inteligencia artificial y aprendizaje automático más comunes de Azure.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>Nombre del servicio</strong></th>
+<th align="center"><strong>Descripción</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Azure Machine Learning Service</td>
+<td align="center">Entorno basado en la nube que puede usar para desarrollar, entrenar, probar, implementar, administrar y realizar un seguimiento de los modelos de aprendizaje automático. Puede generar y ajustar automáticamente un modelo. Le permite comenzar a entrenar en el equipo local y luego escalar horizontalmente a la nube.</td>
+</tr>
+<tr>
+<td align="center">Azure ML Studio</td>
+<td align="center">Área de trabajo visual colaborativa donde puede compilar, probar e implementar soluciones de aprendizaje automático mediante algoritmos de aprendizaje automático predefinidos y módulos de control de datos.</td>
+</tr>
+</tbody>
+</table>
+<p><em>Cognitive Services</em> es un conjunto de productos estrechamente relacionados. Puede usar estas API precompiladas en las aplicaciones para solucionar problemas complejos.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>Nombre del servicio</strong></th>
+<th align="center"><strong>Descripción</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Visión</td>
+<td align="center">Use algoritmos de procesamiento de imágenes para identificar, subtitular, indexar y moderar imágenes y vídeos.</td>
+</tr>
+<tr>
+<td align="center">Voz</td>
+<td align="center">Convierta voz en texto, use la voz para la comprobación o agregue reconocimiento del hablante a la aplicación.</td>
+</tr>
+<tr>
+<td align="center">Asignación de conocimiento</td>
+<td align="center">Asigne información y datos complejos para resolver tareas como las de recomendaciones inteligentes y búsqueda semántica.</td>
+</tr>
+<tr>
+<td align="center">Bing Search</td>
+<td align="center">Agregue las Bing Search API a sus aplicaciones y aproveche la capacidad de combinar miles de millones de páginas web, imágenes, vídeos y noticias con una sola llamada API.</td>
+</tr>
+<tr>
+<td align="center">Procesamiento de lenguaje natural</td>
+<td align="center">permita que las aplicaciones procesen lenguaje natural con scripts precompilados, evalúen opiniones y aprendan a reconocer lo que quieren los usuarios.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="devops">DevOps<a class="headerlink" href="#devops" title="Permanent link">&para;</a></h3>
+<p>DevOps reúne a individuos, procesos y tecnología mediante la automatización de la entrega de software para ofrecer un valor continuo a los usuarios. Con Azure DevOps puede crear, <em>compilar</em> y <em>publicar</em> canalizaciones que proporcionan integración, entrega e implementación continuas a las aplicaciones. Puede integrar los repositorios y las pruebas de aplicaciones, realizar la supervisión de aplicaciones y trabajar con artefactos de compilación. También puede trabajar con elementos de trabajo pendiente para realizar el seguimiento, automatizar la implementación de la infraestructura e integrar una gama de herramientas y servicios de terceros como Jenkins y Chef. </p>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>Nombre del servicio</strong></th>
+<th align="center"><strong>Descripción</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Azure DevOps</td>
+<td align="center">Use herramientas de colaboración de desarrollo como canalizaciones de alto rendimiento, repositorios Git privados gratuitos, paneles Kanban configurables y completas pruebas de carga basadas en la nube y automatizadas. Anteriormente conocido como Visual Studio Team Services.</td>
+</tr>
+<tr>
+<td align="center">Azure DevTest Labs</td>
+<td align="center">Cree rápidamente entornos de Windows y Linux a petición para probar o realizar demostraciones de las aplicaciones directamente desde canalizaciones de implementación.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="introduccion-a-las-cuentas-de-azure">Introducción a las cuentas de Azure<a class="headerlink" href="#introduccion-a-las-cuentas-de-azure" title="Permanent link">&para;</a></h2>
+<p>Para crear y usar los servicios de Azure, necesita una suscripción de Azure.</p>
+<p><img alt="Ilustración en la que se muestran los diferentes niveles del ámbito de la cuenta." src="https://docs.microsoft.com/es-es/learn/azure-fundamentals/intro-to-azure-fundamentals/media/scope-levels-12669ee1.png" /></p>
+<p>Una vez vista la jerarquía vertical de la organización, describamos cada uno de estos niveles empezando desde abajo:</p>
+<ul>
+<li><strong>Recursos</strong>: Los recursos son instancias de servicios que puede crear, como máquinas virtuales, almacenamiento o bases de datos SQL.</li>
+<li><strong>Grupos de recursos</strong>: Los recursos se combinan en grupos de recursos, que actúan como contenedor lógico en el que se implementan y administran recursos de Azure como aplicaciones web, bases de datos y cuentas de almacenamiento.</li>
+<li><strong>Suscripciones</strong>: Una suscripción agrupa las cuentas de usuario y los recursos que han creado esas cuentas de usuario. Para cada suscripción, hay límites o cuotas en la cantidad de recursos que se pueden crear y usar. Las organizaciones pueden usar las suscripciones para administrar los costos y los recursos creados por los usuarios, equipos o proyectos.</li>
+<li><strong>Grupos de administración</strong>: Estos grupos le ayudan a administrar el acceso, las directivas y el cumplimiento de varias suscripciones. Todas las suscripciones de un grupo de administración heredan automáticamente las condiciones que se aplican al grupo de administración.</li>
+</ul>
+<h2 id="regiones-de-azure">Regiones de Azure<a class="headerlink" href="#regiones-de-azure" title="Permanent link">&para;</a></h2>
+<p>Una <em>región</em> es un área geográfica del planeta que contiene al menos un centro de datos, aunque podrían ser varios centros de datos cercanos y conectados mediante una red de baja latencia. Azure asigna y controla los recursos de forma inteligente dentro de cada región para garantizar que las cargas de trabajo están bien compensadas.</p>
+<h3 id="por-que-son-importantes-las-regiones">¿Por qué son importantes las regiones?<a class="headerlink" href="#por-que-son-importantes-las-regiones" title="Permanent link">&para;</a></h3>
+<p>Estas regiones le dan la flexibilidad necesaria para acercar las aplicaciones a los usuarios estén donde estén. Las regiones globales proporcionan una mejor escalabilidad y redundancia, y conservan la residencia de datos para los servicios.</p>
+<h3 id="regiones-de-azure-especiales">Regiones de Azure especiales<a class="headerlink" href="#regiones-de-azure-especiales" title="Permanent link">&para;</a></h3>
+<p>Azure tiene regiones especializadas que se pueden usar al crear las aplicaciones, en lo referente al cumplimiento normativo o a aspectos legales.</p>
+<ul>
+<li><strong>US DoD (centro), US Gov Virginia, US Gov Iowa y más:</strong> Estas regiones son instancias físicas y lógicas con aislamiento de red de Azure para asociados y agencias de la administración pública de EE. UU. Estos centros de datos están operados por personal estadounidense sometido a evaluación e incluyen certificaciones de cumplimiento adicionales.</li>
+<li><strong>Este de China, Norte de China y más:</strong> Estas regiones están disponibles gracias a una asociación exclusiva entre Microsoft y 21Vianet, por la cual Microsoft no mantiene directamente los centros de datos.</li>
+</ul>
+<h2 id="zonas-de-disponibilidad-de-azure">Zonas de disponibilidad de Azure<a class="headerlink" href="#zonas-de-disponibilidad-de-azure" title="Permanent link">&para;</a></h2>
+<p>Las zonas de disponibilidad son centros de datos separados físicamente dentro de una región de Azure. Cada zona de disponibilidad consta de uno o varios centros de datos equipados con alimentación, refrigeración y redes independientes. Una zona de disponibilidad se configura para constituir un <em>límite de aislamiento</em>. Si una zona deja de funcionar, la otra continúa trabajando. Las zonas de disponibilidad están conectadas a través de redes de fibra óptica de alta velocidad privadas.</p>
+<p><img alt="Diagrama en el que se muestran tres centros de datos conectados dentro de una sola región de Azure que representa una zona de disponibilidad." src="https://docs.microsoft.com/es-es/learn/azure-fundamentals/azure-architecture-fundamentals/media/availability-zones-5c3c490c.png" /></p>
+<blockquote>
+<p>No todas las regiones son compatibles con las zonas de disponibilidad.</p>
+</blockquote>
+<h2 id="pares-de-regiones-de-azure">Pares de regiones de Azure<a class="headerlink" href="#pares-de-regiones-de-azure" title="Permanent link">&para;</a></h2>
+<p>Cada región de Azure se empareja siempre con otra región de la misma zona geográfica (por ejemplo, EE. UU., Europa o Asia) que se encuentre como mínimo a 500 km de distancia.</p>
+<p><img alt="Diagrama en el que se muestra la relación entre el par de regiones, la geografía, la región y el centro de datos." src="https://docs.microsoft.com/es-es/learn/azure-fundamentals/azure-architecture-fundamentals/media/region-pairs-d9eb9728.png" /></p>
+<p>Ventajas adicionales de los pares de región:</p>
+<ul>
+<li>Si se produce una gran interrupción de Azure, se da prioridad a una región de cada par para asegurarse de que al menos una se restaure lo más rápido posible para las aplicaciones hospedadas en ese par de regiones.</li>
+<li>Las actualizaciones planeadas de Azure se implementan una a una en regiones emparejadas para minimizar el tiempo de inactividad y el riesgo de interrupción de la aplicación.</li>
+<li>Los datos siguen residiendo en la misma zona geográfica que su pareja (excepto Sur de Brasil) con fines de jurisdicción fiscal y de aplicación de la ley.</li>
+</ul>
+<h2 id="grupos-de-recursos-de-azure">Grupos de recursos de Azure<a class="headerlink" href="#grupos-de-recursos-de-azure" title="Permanent link">&para;</a></h2>
+<p>Un grupo de recursos es un contenedor lógico para recursos implementados en Azure. Estos recursos pueden ser cualquier cosa que cree en una suscripción de Azure como máquinas virtuales, instancias de Azure Application Gateway y de Azure Cosmos DB. Todos los recursos deben estar en un grupo de recursos, y un recurso solo puede ser miembro de un único grupo de recursos. Muchos recursos pueden moverse entre grupos de recursos con algunos servicios que tengan limitaciones o requisitos determinados para mover. Los grupos de recursos no se pueden anidar. Antes de poder aprovisionar un recurso, necesita un grupo de recursos en el que colocarlo.</p>
+<h3 id="agrupacion-logica">Agrupación lógica<a class="headerlink" href="#agrupacion-logica" title="Permanent link">&para;</a></h3>
+<p>La agrupación lógica es el aspecto que más le interesa, ya que, entre los recursos, el desorden es elevado.</p>
+<h3 id="ciclo-de-vida">Ciclo de vida<a class="headerlink" href="#ciclo-de-vida" title="Permanent link">&para;</a></h3>
+<p>La organización de los recursos por ciclo de vida puede ser útil en entornos que no sean de producción, en los que puede probar un experimento y después descartarlo. Los grupos de recursos facilitan la tarea de quitar un conjunto de recursos a la vez.</p>
+<h3 id="autorizacion">Autorización<a class="headerlink" href="#autorizacion" title="Permanent link">&para;</a></h3>
+<p>Los grupos de recursos también son un ámbito para aplicar permisos de control de acceso basado en roles (RBAC).</p>
+<h2 id="azure-resource-manager">Azure Resource Manager<a class="headerlink" href="#azure-resource-manager" title="Permanent link">&para;</a></h2>
+<p>Es el servicio de implementación y administración para Azure que proporciona una capa de administración.</p>
+<p>Cuando un usuario envía una solicitud de cualquiera de las herramientas, las API o los SDK de Azure, Resource Manager recibe la solicitud. Autentica y autoriza la solicitud. Resource Manager envía la solicitud al servicio de Azure, que lleva a cabo la acción solicitada. Dado que todas las solicitudes se controlan mediante la misma API, verá resultados y funcionalidades coherentes en todas las distintas herramientas.</p>
+<p><img alt="Diagrama que muestra un modelo de solicitud de Resource Manager." src="https://docs.microsoft.com/es-es/learn/azure-fundamentals/azure-architecture-fundamentals/media/consistent-management-layer-feef9259.png" /></p>
+<h3 id="ventajas-de-usar-administrador-de-recursos">Ventajas de usar Administrador de recursos<a class="headerlink" href="#ventajas-de-usar-administrador-de-recursos" title="Permanent link">&para;</a></h3>
+<p>Con Resource Manager puede:</p>
+<ul>
+<li>Administrar la infraestructura mediante plantillas declarativas en lugar de scripts. Una plantilla de Resource Manager es un archivo JSON que define lo que quiere implementar en Azure.</li>
+<li>Implementar, administrar y supervisar todos los recursos de la solución en grupo, en lugar de controlarlos individualmente.</li>
+<li>Vuelva a implementar la solución a lo largo del ciclo de vida de desarrollo y tenga la seguridad de que los recursos se implementan en un estado coherente.</li>
+<li>Definir las dependencias entre recursos de modo que se implementen en el orden correcto.</li>
+<li>Aplique control de acceso a todos los servicios, puesto que RBAC se integra de forma nativa en la plataforma de administración.</li>
+<li>Aplicar etiquetas a los recursos para organizar de manera lógica todos los recursos de la suscripción.</li>
+<li>Comprenda la facturación de la organización viendo los costos de un grupo de recursos que comparten la misma etiqueta.</li>
+</ul>
+<h2 id="suscripciones-de-azure">Suscripciones de Azure<a class="headerlink" href="#suscripciones-de-azure" title="Permanent link">&para;</a></h2>
+<p>a suscripción le proporciona acceso autenticado y autorizado a los servicios y productos de Azure. Una suscripción de Azure es una unidad lógica de servicios de Azure que está vinculada a una cuenta de Azure, que es una identidad en Azure Active Directory (Azure AD) o en un directorio en el que confía Azure AD.</p>
+<p><img alt="Diagrama que muestra las suscripciones de Azure usan la autenticación y la autorización para acceder a las cuentas de Azure." src="https://docs.microsoft.com/es-es/learn/azure-fundamentals/azure-architecture-fundamentals/media/subscriptions-afe063a7.png" /></p>
+<p>Una cuenta puede tener una suscripción o varias suscripciones que con distintos modelos de facturación y a las que se aplican diferentes directivas de administración de acceso</p>
+<ul>
+<li><strong>Límite de facturación</strong>: Este tipo de suscripción determina cómo se factura una cuenta de Azure por el uso de Azure. Puede crear varias suscripciones para diferentes tipos de requisitos de facturación. Azure genera facturas e informes de facturación independientes para cada suscripción, de modo que pueda organizar y administrar los costos.</li>
+<li><strong>Límite de control de acceso</strong>: Azure aplica las directivas de administración de acceso en el nivel de suscripción, por lo que puede crear suscripciones independientes para reflejar distintas estructuras organizativas. Este modelo de facturación le permite administrar y controlar el acceso a los recursos que los usuarios aprovisionan con suscripciones específicas.</li>
+</ul>
+<h3 id="creacion-de-una-suscripcion-de-azure-adicional">Creación de una suscripción de Azure adicional<a class="headerlink" href="#creacion-de-una-suscripcion-de-azure-adicional" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Entornos</strong>: suscripciones con el fin de configurar entornos independientes para el desarrollo y las pruebas, para seguridad o para aislar los datos por motivos de cumplimiento.</li>
+<li><strong>Estructuras organizativas</strong>: puede crear suscripciones para reflejar las distintas estructuras organizativas. Este diseño permite administrar y controlar el acceso a los recursos que los usuarios aprovisionan en cada suscripción.</li>
+<li>
+<p><strong>Facturación</strong>: suscripciones adicionales para fines de facturación. </p>
+</li>
+<li>
+<p><strong>Límites de suscripción</strong>: las suscripciones se enlazan a algunas limitaciones de hardware. Esos límites se deben tener en consideración al crear suscripciones en la cuenta.</p>
+</li>
+</ul>
+<h3 id="personalizacion-de-la-facturacion-para-satisfacer-sus-necesidades">Personalización de la facturación para satisfacer sus necesidades<a class="headerlink" href="#personalizacion-de-la-facturacion-para-satisfacer-sus-necesidades" title="Permanent link">&para;</a></h3>
+<p>Si tiene varias suscripciones, puede organizarlas en secciones de la factura. Cada sección de la factura es un elemento de línea en la factura que muestra los cargos en los que se incurre ese mes.</p>
+<p>En función de sus necesidades, se pueden configurar varias facturas dentro de la misma cuenta de facturación. Para ello, cree perfiles de facturación adicionales. Cada perfil de facturación contiene su propia factura mensual y método de pago.</p>
+<p><img alt="Diagrama de flujo en el que se muestra un ejemplo de configuración de una estructura de facturación, donde diferentes grupos como marketing o desarrollo tienen su propia suscripción de Azure, que se acumula en una cuenta de facturación de Azure de pago más grande de la empresa." src="https://docs.microsoft.com/es-es/learn/azure-fundamentals/azure-architecture-fundamentals/media/billing-structure-overview-2c81a8ad.png" /></p>
+<h2 id="grupos-de-administracion-de-azure">Grupos de administración de Azure<a class="headerlink" href="#grupos-de-administracion-de-azure" title="Permanent link">&para;</a></h2>
+<p>Los grupos de administración de Azure ofrecen un nivel de ámbito que está por encima de las suscripciones. Las suscripciones se organizan en contenedores llamados grupos de administración y las condiciones de gobernanza se aplican a los grupos de administración. Todas las suscripciones dentro de un grupo de administración heredan automáticamente las condiciones que se aplican al grupo de administración. Los grupos de administración proporcionan capacidad de administración de nivel empresarial a gran escala con independencia del tipo de suscripciones que tenga. Todas las suscripciones de un único grupo de administración deben confiar en el mismo inquilino de Azure AD.</p>
+<h3 id="jerarquia-de-los-grupos-de-administracion-y-las-suscripciones">Jerarquía de los grupos de administración y las suscripciones<a class="headerlink" href="#jerarquia-de-los-grupos-de-administracion-y-las-suscripciones" title="Permanent link">&para;</a></h3>
+<p>Puede compilar una estructura flexible de grupos de administración y suscripciones para organizar los recursos en una jerarquía para una administración unificada de las directivas y el acceso. </p>
+<p><img alt="Diagrama que muestra un ejemplo de un árbol de jerarquía de grupos de administración." src="https://docs.microsoft.com/es-es/learn/azure-fundamentals/azure-architecture-fundamentals/media/management-groups-and-subscriptions-bba71896.png" /></p>
+<blockquote>
+<p>Puede crear una jerarquía que aplique una directiva.</p>
+</blockquote>
+<h3 id="hechos-importantes-acerca-de-los-grupos-de-administracion">Hechos importantes acerca de los grupos de administración<a class="headerlink" href="#hechos-importantes-acerca-de-los-grupos-de-administracion" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Se admiten 10 000 grupos de administración en un único directorio.</li>
+<li>Un árbol de grupo de administración puede admitir hasta seis niveles de profundidad. Este límite no incluye el nivel raíz ni el nivel de suscripción.</li>
+<li>Cada grupo de administración y suscripción solo puede admitir un elemento primario.</li>
+<li>Cada grupo de administración puede tener muchos elementos secundarios.</li>
+<li>Todas las suscripciones y grupos de administración están dentro de una única jerarquía en cada directorio.</li>
+</ul>
+<h2 id="terminologia-y-conceptos-de-azure">Terminología y conceptos de Azure<a class="headerlink" href="#terminologia-y-conceptos-de-azure" title="Permanent link">&para;</a></h2>
+<h3 id="que-es-app-service">¿Qué es App Service?<a class="headerlink" href="#que-es-app-service" title="Permanent link">&para;</a></h3>
+<p>App Service es un servicio basado en HTTP que permite crear y hospedar muchos tipos de soluciones basadas en la Web sin necesidad de administrar la infraestructura.</p>
+<h3 id="que-es-azure-marketplace_1">¿Qué es Azure Marketplace?<a class="headerlink" href="#que-es-azure-marketplace_1" title="Permanent link">&para;</a></h3>
+<p>Azure Marketplace es una tienda en línea que hospeda aplicaciones certificadas y optimizadas para ejecutarse en Azure.</p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Pie" >
+      
+        
+        <a href="../intro/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Introduccion Cloud" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              Introduccion Cloud
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../modulo-2/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Modulo 2" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              Modulo 2
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b028fd86.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.7f366e99.min.js"></script>
+      
+    
+  </body>
+</html>
