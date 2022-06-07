@@ -33,7 +33,7 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
 nav:
-    - Home: 'index.md'
+    - 'Home': 'index.md'
     - 'Introduccion a Big Data': 'intro.md'
     - 'Apache':
         - 'Hadoop': 'apache/hadoop/intro.md'
@@ -60,6 +60,6 @@ nav:
             - 'Introduccion': 'plataforma/databricks/intro.md'
         - 'Snowflake': 
             - 'Introduccion': 'plataforma/snowflake/intro.md'
-    - 'Lenguajes'
+    - 'Lenguajes':
         - 'Scala':
             - 'Introduccion': 'lang/scala/intro.md'
