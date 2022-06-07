@@ -32,3 +32,34 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.details
   - pymdownx.superfences
+nav:
+    - Home: 'index.md'
+    - 'Introduccion a Big Data': 'intro.md'
+    - 'Apache':
+        - 'Hadoop': 'apache/hadoop/intro.md'
+        - 'HBase': 'apache/hbase/intro.md'
+        - 'Hive': 'apache/hive/intro.md'
+        - 'Kafka': 'apache/kafka/intro.md'
+        - 'Spark': 
+            - 'Introduccion': 'apache/spark/intro.md'
+            - 'Spark SQL': 'apache/spark/SparkSQL.md'
+            - 'Spark Streaming': 'apache/spark/SparkStreaming.md'
+            - 'Tuning Spark': 'apache/spark/TuningSpark.md'
+    - 'Azure':
+        - 'Introduccion Cloud': 'azure/intro.md'
+        - 'Modulo 1': 'azure/modulo-1.md'
+        - 'Modulo 2': 'azure/modulo-2.md'
+        - 'Modulo 3': 'azure/modulo-3.md'
+    - 'Motores':
+        - 'Impala': 
+            - 'Introduccion': 'motores/impala/intro.md'
+    - 'Plataformas':
+        - 'Airflow': 
+            - 'Introduccion': 'plataforma/airflow/intro.md'
+        - 'Databricks': 
+            - 'Introduccion': 'plataforma/databricks/intro.md'
+        - 'Snowflake': 
+            - 'Introduccion': 'plataforma/snowflake/intro.md'
+    - 'Lenguajes'
+        - 'Scala':
+            - 'Introduccion': 'lang/scala/intro.md'
