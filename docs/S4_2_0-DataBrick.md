@@ -15,3 +15,4 @@ Existen dos tipos de clúster:
 
 
 
+**INCOMPLETO**

@@ -62,6 +62,17 @@ Es la lógica real detrás de una tarea. Define qué tipo de acciones se realiza
 - Operador de transferencia: este mueve los datos
 - Sensores: siguen funcionando hasta que se cumple un criterio
 
+
+
+Entre los operadores más usados se encuentran los siguientes:
+
+- **Bash Operator**: Permite ejecutar scripts en Bash, aunque es posible modificarlo.
+- **Database Operator**: Nos permite interactuar con bases de datos. Se usan al obtener datos de una base de datos mediante consultas SQL e información de autenticación. Es compatible con bases de datos populares como MySQL, Postgres, Sqlite o con JDBC.
+- **Python Operator**: Ejecuta scripts en Python y operaciones creadas para el DAG.
+- **Sensor Operator**: Está a la espera de detectar modificaciones en sistemas externos como ficheros o fuentes de datos.
+- **Email Operator**: Este operador permite enviar un email a modo de notificación.
+- **HTTP Operator**: Permite usar una API HTTP que necesite autenticación.
+
 ###  Definición de dependencias
 
 cuando un operador depende de otro podemos indicarlo con *>>* o bien usando los metodos set_upstream y set_downstream
@@ -69,6 +80,8 @@ cuando un operador depende de otro podemos indicarlo con *>>* o bien usando los 
 Ejemplo: El op2 dependerá de el op1. op1 >> op2 
 
 ### Arquitectura
+
+![](../img/arch-diag-basic.png)
 
 ### Hooks
 
