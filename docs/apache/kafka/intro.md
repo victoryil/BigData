@@ -39,10 +39,10 @@ Un Sistema de Mensajería es responsable de transferir datos de una aplicación 
 
 En un sistema punto a punto, los mensajes se conservan en una cola. Uno o más consumidores pueden consumir los mensajes en la cola, pero un mensaje en particular puede ser consumido por un máximo de un solo consumidor. Una vez que un consumidor lee un mensaje en la cola, desaparece de esa cola. El ejemplo típico de este sistema es un Sistema de Procesamiento de Pedidos, donde cada pedido será procesado por un Procesador de Pedidos, pero varios Procesadores de Pedidos también pueden funcionar al mismo tiempo. El siguiente diagrama muestra la estructura.
 
-![](..\img\point_to_point_messaging_system.jpg)
+![](../../assets/images/point_to_point_messaging_system.jpg)
 
 ### Sistema de mensajería de publicación y suscripción
 
 En el sistema de publicación-suscripción, los mensajes se conservan en un tema. A diferencia del sistema punto a punto, los consumidores pueden suscribirse a uno o más temas y consumir todos los mensajes de ese tema. En el sistema de publicación-suscripción, los productores de mensajes se denominan editores y los consumidores de mensajes se denominan suscriptores. Un ejemplo de la vida real es Dish TV, que publica diferentes canales como deportes, películas, música, etc., y cualquiera puede suscribirse a su propio conjunto de canales y obtenerlos siempre que los canales suscritos estén disponibles.
 
-![](assets/images/publish_subscribe_messaging_system.jpg)
+![](../../assets/images/publish_subscribe_messaging_system.jpg)
