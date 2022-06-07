@@ -45,4 +45,4 @@ En un sistema punto a punto, los mensajes se conservan en una cola. Uno o más c
 
 En el sistema de publicación-suscripción, los mensajes se conservan en un tema. A diferencia del sistema punto a punto, los consumidores pueden suscribirse a uno o más temas y consumir todos los mensajes de ese tema. En el sistema de publicación-suscripción, los productores de mensajes se denominan editores y los consumidores de mensajes se denominan suscriptores. Un ejemplo de la vida real es Dish TV, que publica diferentes canales como deportes, películas, música, etc., y cualquiera puede suscribirse a su propio conjunto de canales y obtenerlos siempre que los canales suscritos estén disponibles.
 
-![](..\img\publish_subscribe_messaging_system.jpg)
+![](assets/images/publish_subscribe_messaging_system.jpg)

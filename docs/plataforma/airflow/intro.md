@@ -81,7 +81,7 @@ Ejemplo: El op2 dependerá de el op1. op1 >> op2
 
 ### Arquitectura
 
-![](../img/arch-diag-basic.png)
+![](assets/images/arch-diag-basic.png)
 
 ### Hooks
 
