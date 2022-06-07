@@ -6,7 +6,7 @@ HBase es un modelo de datos que es similar a Google la gran tabla diseñada para
 
 Uno puede almacenar los datos de los HDFS, bien directamente o a través HBase. Consumidor de datos lee y tiene acceso a los datos en forma aleatoria usando HBase HDFS. HBase se sitúa en la parte superior de la Hadoop y Sistema de Archivos proporciona acceso de lectura y escritura.
 
-![HDFS HBASE](assets\images\hbase_flow.jpg)
+![HDFS HBASE](../../assets/images/hbase_flow.jpg)
 
 ## Mecanismo de almacenamiento en HBase
 
